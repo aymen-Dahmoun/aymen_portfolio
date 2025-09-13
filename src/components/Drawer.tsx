@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from "react";
+import ConstellationBackground from "./ConstellationBackground";
 
 interface DrawerProps {
   isOpen: boolean;
@@ -10,7 +11,7 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose }) => {
 
   useEffect(() => {
     if (drawerRef.current) {
-      drawerRef.current.style.transition = "transform 0.3s ease";
+      drawerRef.current.style.transition = "transform 1s ease";
       drawerRef.current.style.transform = isOpen
         ? "translateX(0)"
         : "translateX(-100vw)";
@@ -19,19 +20,18 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose }) => {
 
   return (
     <>
-      {/* Overlay */}
       <div
-        className={`fixed inset-0 bg-black bg-opacity-50 transition-opacity duration-300 ${
+        className={`fixed z-50 inset-0 bg-transparent bg-opacity-50 transition-opacity duration-300 ${
           isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
         onClick={onClose}
       />
 
-      {/* Drawer */}
       <div
         ref={drawerRef}
         className="fixed top-0 left-0 h-full w-screen bg-white dark:bg-gray-900 shadow-lg z-40"
       >
+        <ConstellationBackground number={150} />
         <div className="p-6">
           <h1 className="text-2xl font-bold">Your Name</h1>
           <p className="text-gray-500">Designer / Developer</p>
