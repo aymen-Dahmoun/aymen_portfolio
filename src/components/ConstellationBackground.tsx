@@ -16,7 +16,7 @@ export default function ConstellationBackground({ number = 150 }: ConstellationB
     <Particles
       id="tsparticles"
       init={particlesInit}
-      className="absolute inset-0 -z-10 bg-transparent"
+      className="inset-0 -z-10 bg-transparent"
       options={{
         background: { color: "transparent" },
         fpsLimit: 60,
@@ -44,7 +44,7 @@ export default function ConstellationBackground({ number = 150 }: ConstellationB
           },
           number: { value: number, density: { enable: true, area: 800 } },
           opacity: { value: 0.5 },
-          shape: { type: ["circle", "triangle", "edge", "polygon", "star"] },
+          shape: { type: ["circle", "triangle", "edge", "polygon"] },
           size: { value: { min: 1, max: 3 } },
         },
         detectRetina: true,
