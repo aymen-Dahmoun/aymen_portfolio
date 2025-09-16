@@ -4,17 +4,29 @@ import {
   DialogHeader,
   DialogTitle,
   DialogDescription,
-} from "@/comps/ui/dialog";
+} from "./Dialog";
 import { motion } from "framer-motion";
+import type { Tech } from "./Projects";
 
-const Modal = ({ open, onOpenChange, department }) => {
-  if (!department) return null;
+interface Project {
+  name: string;
+  description: string;
+  stack: Tech[];
+  images: string[];
+}
+
+interface ModalProps {
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
+  project: Project | null;
+}
+
+const Modal: React.FC<ModalProps> = ({ open, onOpenChange, project }) => {
+  if (!project) return null;
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent
-        className="max-w-3xl w-[95%] rounded-2xl bg-gradient-to-br from-[#0a0a0f] to-[#1a0f0f] text-white border border-white/10 shadow-2xl overflow-hidden"
-      >
+      <DialogContent className="max-w-4xl w-[95%] rounded-2xl bg-gradient-to-br from-blue-900/40 via-black to-blue-800/40 text-white border border-white/10 shadow-2xl overflow-hidden">
         <motion.div
           initial={{ opacity: 0, y: 40, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -22,45 +34,63 @@ const Modal = ({ open, onOpenChange, department }) => {
           transition={{ duration: 0.25, ease: "easeOut" }}
           className="relative"
         >
-
+          {/* Header */}
           <DialogHeader className="border-b border-white/10 pb-4">
-            <DialogTitle className="text-3xl font-extrabold text-[#ff5858] tracking-tight">
-              {department.name}
+            <DialogTitle className="text-3xl font-extrabold text-blue-600 tracking-tight">
+              {project.name}
             </DialogTitle>
             <DialogDescription className="text-gray-400 text-base">
-              Explore full details of this department
+              Project details and technology stack
             </DialogDescription>
           </DialogHeader>
 
+          {/* Content */}
           <div className="max-h-[70vh] overflow-y-auto pr-2 space-y-8 mt-6">
+            {/* Description */}
             <section>
-              <h3 className="font-semibold text-lg mb-2 text-[#ff9f9f]">
-                Managers
+              <h3 className="font-semibold text-lg mb-2 text-blue-600">
+                Description
               </h3>
-              <ul className="list-disc list-inside space-y-1 text-gray-200">
-                {department.managers.map((m, idx) => (
-                  <li key={idx}>
-                    <span className="font-medium">{m.name}</span> – {m.role}
+              <p className="text-gray-300 leading-relaxed">
+                {project.description}
+              </p>
+            </section>
+
+            {/* Tech Stack */}
+            <section>
+              <h3 className="font-semibold text-lg mb-2 text-blue-600">
+                Tech Stack
+              </h3>
+              <ul className="flex flex-wrap gap-2">
+                {project.stack.map((tech, idx) => (
+                  <li
+                    key={idx}
+                    className="px-3 py-1 bg-white/10 text-sm rounded-md border border-white/20"
+                  >
+                    <div className="flex items-center gap-2">
+                      <tech.icon className="size-5 text-blue-400" />
+                      <span>{tech.name}</span>
+                    </div>
                   </li>
                 ))}
               </ul>
             </section>
 
+            {/* Images */}
             <section>
-              <h3 className="font-semibold text-lg mb-2 text-[#ff9f9f]">
-                Description
+              <h3 className="font-semibold text-lg mb-2 text-blue-600">
+                Screenshots
               </h3>
-              <p className="text-gray-300 leading-relaxed">
-                {department.description}
-              </p>
-            </section>
-
-            {/* Workshops */}
-            <section>
-              <h3 className="font-semibold text-lg mb-2 text-[#ff9f9f]">
-                Workshops
-              </h3>
-              <p className="text-gray-300">{department.workshops}</p>
+              <div className="flex overflow-x-auto space-x-4 pb-2 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
+                {project.images.map((src, idx) => (
+                  <img
+                    key={idx}
+                    src={src}
+                    alt={`Screenshot ${idx + 1}`}
+                    className="h-48 w-auto rounded-lg border border-white/10 shadow-md object-cover flex-shrink-0"
+                  />
+                ))}
+              </div>
             </section>
           </div>
         </motion.div>

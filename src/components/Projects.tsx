@@ -1,56 +1,134 @@
+import { useState } from "react";
 import ProjectCard from "./ProjectCard";
+import Modal from "./ProjectModal";
+import { SiReact, SiNestjs, SiPrisma, SiFlutter, SiNextdotjs, SiNodedotjs, SiVite, SiTailwindcss, SiFirebase, SiDjango, SiPython, SiFlask } from "react-icons/si";
+import type { IconType } from "react-icons";
 
-const projects = [
+export interface Tech {
+  name: string;
+  icon: IconType;
+}
+
+const projects: {
+  name: string;
+  description: string;
+  stack: Tech[];
+  image: string;
+  images: string[];
+}[] = [
   {
     name: "FarmConnect",
-    stack: ["React", "NestJS", "Prisma", "Flutter"],
+    description: "A platform connecting farmers with buyers and logistics providers.",
+    stack: [
+      { name: "React", icon: SiReact },
+      { name: "NestJS", icon: SiNestjs },
+      { name: "Prisma", icon: SiPrisma },
+      { name: "Flutter", icon: SiFlutter },
+    ],
     image: "https://via.placeholder.com/320x160",
+    images: [
+      "https://via.placeholder.com/600x400?text=FarmConnect+1",
+      "https://via.placeholder.com/600x400?text=FarmConnect+2",
+    ],
   },
   {
     name: "Savvy",
-    stack: ["Next.js", "CRON", "Node-fetch"],
+    description: "Automated task scheduling system with CRON integration.",
+    stack: [
+      { name: "Next.js", icon: SiNextdotjs },
+      { name: "Node.js", icon: SiNodedotjs },
+    ],
     image: "https://via.placeholder.com/320x160",
+    images: [
+      "https://via.placeholder.com/600x400?text=Savvy+1",
+      "https://via.placeholder.com/600x400?text=Savvy+2",
+    ],
   },
   {
     name: "BiblioTech",
-    stack: ["React", "Vite", "Tailwind CSS"],
+    description: "A modern digital library system for students.",
+    stack: [
+      { name: "React", icon: SiReact },
+      { name: "Vite", icon: SiVite },
+      { name: "Tailwind CSS", icon: SiTailwindcss },
+    ],
     image: "https://via.placeholder.com/320x160",
+    images: [
+      "https://via.placeholder.com/600x400?text=BiblioTech+1",
+      "https://via.placeholder.com/600x400?text=BiblioTech+2",
+    ],
   },
   {
     name: "LifeDrop",
-    stack: ["React Native", "Firebase", "JSON"],
+    description: "Blood donation mobile app to connect donors and hospitals.",
+    stack: [
+      { name: "React Native", icon: SiReact },
+      { name: "Firebase", icon: SiFirebase },
+    ],
     image: "https://via.placeholder.com/320x160",
+    images: [
+      "https://via.placeholder.com/600x400?text=LifeDrop+1",
+      "https://via.placeholder.com/600x400?text=LifeDrop+2",
+    ],
   },
   {
     name: "E-Plan",
-    stack: ["Django", "React.js", "Vite"],
+    description: "Event planning tool with real-time collaboration.",
+    stack: [
+      { name: "Django", icon: SiDjango },
+      { name: "React", icon: SiReact },
+      { name: "Vite", icon: SiVite },
+    ],
     image: "https://via.placeholder.com/320x160",
+    images: [
+      "https://via.placeholder.com/600x400?text=E-Plan+1",
+      "https://via.placeholder.com/600x400?text=E-Plan+2",
+    ],
   },
   {
     name: "WatchWave",
-    stack: ["Python", "Flask", "NLP", "React"],
+    description: "AI-driven video content analyzer using NLP.",
+    stack: [
+      { name: "Python", icon: SiPython },
+      { name: "Flask", icon: SiFlask },
+      { name: "React", icon: SiReact },
+    ],
     image: "https://via.placeholder.com/320x160",
+    images: [
+      "https://via.placeholder.com/600x400?text=WatchWave+1",
+      "https://via.placeholder.com/600x400?text=WatchWave+2",
+    ],
   },
 ];
 
 export default function Projects() {
+  const [open, setOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState<(typeof projects)[0] | null>(null);
+
   return (
     <section className="relative flex flex-col items-center justify-center py-20">
-      <h2 className="text-4xl font-bold text-white mb-12">✨ Projects ✨</h2>
+      <h2 className="text-4xl font-bold text-white mb-12">Projects</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 relative">
         {projects.map((project, i) => (
           <div
             key={project.name}
-            className={`floating`}
-            style={{
-              animationDelay: `${i * 0.6}s`,
-            }}
+            className="floating"
+            style={{ animationDelay: `${i * 0.6}s` }}
           >
-            <ProjectCard {...project} />
+            <ProjectCard
+              {...project}
+              onClick={() => {
+                setSelectedProject(project);
+                setOpen(true);
+              }}
+            />
           </div>
         ))}
       </div>
+
+      {/* Modal */}
+      <Modal open={open} onOpenChange={setOpen} project={selectedProject} />
     </section>
   );
 }

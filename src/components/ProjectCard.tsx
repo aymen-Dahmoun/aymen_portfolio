@@ -1,13 +1,15 @@
 import { useState, type MouseEvent } from "react";
 import { cn } from "../lib/utils";
+import type { Tech } from "./Projects";
 
-interface SimpleProjectCardProps {
+interface ProjectCardProps {
   name: string;
-  stack: string[];
-  image: string; // image URL or import
+  stack: Tech[];
+  image: string; // cover image
+  onClick?: () => void; // 🔹 added
 }
 
-export default function SimpleProjectCard({ name, stack, image }: SimpleProjectCardProps) {
+export default function ProjectCard({ name, stack, image, onClick }: ProjectCardProps) {
   const [pos, setPos] = useState({ x: 0, y: 0 });
   const [hovered, setHovered] = useState(false);
 
@@ -22,11 +24,12 @@ export default function SimpleProjectCard({ name, stack, image }: SimpleProjectC
   return (
     <div
       className={cn(
-        "relative w-[280px] md:w-[320px] bg-gradient-to-br from-black via-blue-800/5 to-blue-600/20 border border-gray-700/50 rounded-xl shadow-lg overflow-hidden transition-transform duration-300"
+        "relative w-[280px] md:w-[320px] bg-gradient-to-br from-black via-blue-800/5 to-blue-600/20 border border-gray-700/50 rounded-xl shadow-lg overflow-hidden transition-transform duration-300 cursor-pointer"
       )}
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      onClick={onClick} // 🔹 opens modal
     >
       {hovered && (
         <div
@@ -39,11 +42,7 @@ export default function SimpleProjectCard({ name, stack, image }: SimpleProjectC
 
       {/* Project Image */}
       <div className="w-full h-40 bg-gray-900 overflow-hidden">
-        <img
-          src={image}
-          alt={name}
-          className="w-full h-full object-cover"
-        />
+        <img src={image} alt={name} className="w-full h-full object-cover" />
       </div>
 
       {/* Content */}
@@ -52,10 +51,10 @@ export default function SimpleProjectCard({ name, stack, image }: SimpleProjectC
         <div className="flex flex-wrap gap-2">
           {stack.map((tech) => (
             <span
-              key={tech}
+              key={tech.name}
               className="px-2 py-1 bg-gray-700/50 text-gray-200 text-xs font-medium rounded-full"
             >
-              {tech}
+              {tech.name}
             </span>
           ))}
         </div>
