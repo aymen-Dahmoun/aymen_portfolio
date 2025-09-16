@@ -88,7 +88,7 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose }) => {
         <div className="absolute bottom-0 left-0 w-[28rem] h-[28rem] bg-blue-500/30 rounded-full blur-[160px] animate-pulse pointer-events-none z-0"></div>
 
         <div className="relative z-10 flex flex-col md:flex-row items-center justify-center w-full max-w-6xl gap-12 py-12">
-          <CometCard className="order-1 md:order-2 w-56 md:w-80 shrink-0 cursor-default rounded-2xl overflow-hidden">
+          <CometCard className="order-1 md:order-2 w-56 md:w-80 shrink-0 cursor-default rounded-2xl overflow-visible">
             <div className="flex flex-col items-center w-full h-full">
               <div className="w-full aspect-square">
                 <img
@@ -98,7 +98,7 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose }) => {
                 />
               </div>
 
-              <div className="w-full py-2 flex items-center justify-center bg-neutral-800/40 backdrop-blur-sm">
+              <div className="w-full rounded-b-2xl py-2 flex items-center justify-center bg-neutral-800/40 backdrop-blur-sm">
                 <span className="text-lg md:text-xl font-bold tracking-widest text-white/30">
                   Aymen
                 </span>

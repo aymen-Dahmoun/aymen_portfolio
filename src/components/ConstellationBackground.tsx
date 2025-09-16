@@ -16,7 +16,7 @@ export default function ConstellationBackground({ number = 150 }: ConstellationB
     <Particles
       id="tsparticles"
       init={particlesInit}
-      className="inset-0 -z-10 bg-transparent"
+      className="absolute inset-0 -z-10 bg-transparent"
       options={{
         background: { color: "transparent" },
         fpsLimit: 60,
@@ -34,7 +34,7 @@ export default function ConstellationBackground({ number = 150 }: ConstellationB
             distance: 200,
             enable: true,
             opacity: 0.3,
-            width: 1,
+            width: 0.5,
             random: true,
           },
           move: {
