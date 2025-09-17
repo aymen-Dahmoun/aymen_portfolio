@@ -157,7 +157,7 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose }) => {
               <ul className="mt-4 flex justify-center md:justify-start space-x-6 text-gray-300">
                 <li>
                   <a
-                    href="https://www.linkedin.com/in/your-profile"
+                    href="https://www.linkedin.com/in/dahmoun-mouaine-aymen-3b8604300"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-blue-400 transition-colors"
@@ -167,7 +167,7 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose }) => {
                 </li>
                 <li>
                   <a
-                    href="https://github.com/your-username"
+                    href="https://github.com/aymen-Dahmoun"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-gray-400 transition-colors"
@@ -177,7 +177,7 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose }) => {
                 </li>
                 <li>
                   <a
-                    href="mailto:your@email.com"
+                    href="mailto:am.dahmoun@ensta.edu.dz"
                     className="hover:text-red-400 transition-colors"
                   >
                     <FaEnvelope size={28} />

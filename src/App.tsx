@@ -18,7 +18,7 @@ export default function App() {
   }, []);
 
 return (
-  <div className="mt-10" >
+  <div>
     <Navbar onMenuClick={() => setIsOpen(true)} />
     <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} />
     <Home />
