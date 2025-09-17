@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="relative bg-gradient-to-t from-[#0a0f2c] to-[#0d183a] text-gray-300 py-8 mt-20 border-t border-blue-500/20">
+    <footer className="relative bg-gradient-to-t from-[#0a0f2c] to-[#0d183a] text-gray-300 py-8 border-t border-blue-500/20">
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Left side */}
         <div className="text-center md:text-left">
