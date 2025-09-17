@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ProjectCard from "./ProjectCard";
 import Modal from "./ProjectModal";
-import { SiReact, SiVite, SiTailwindcss, SiFirebase, SiDjango, SiPython, SiFlask, SiExpo, SiReactquery, SiPostgresql, SiExpress, SiSocketdotio, SiGooglegemini, SiGmail, SiSupabase, SiCss3 } from "react-icons/si";
+import { SiReact, SiVite, SiTailwindcss, SiFirebase, SiExpo, SiReactquery, SiPostgresql, SiExpress, SiSocketdotio, SiGooglegemini, SiGmail, SiSupabase, SiCss3 } from "react-icons/si";
 import type { IconType } from "react-icons";
 import AutoScrollList from "./AutoScrollList";
 import { FaDatabase, FaNodeJs, FaTelegram } from "react-icons/fa";
