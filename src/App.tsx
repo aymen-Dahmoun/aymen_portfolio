@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Drawer from "./components/Drawer";
 import Navbar from "./components/Navbar.tsx";
 import Home from "./screens/Home.tsx";
+import Footer from "./components/Footer.tsx";
 
 export default function App() {
   const [isOpen, setIsOpen] = useState(true);
@@ -21,6 +22,7 @@ return (
     <Navbar onMenuClick={() => setIsOpen(true)} />
     <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} />
     <Home />
+    <Footer />
   </div>
 );
 }

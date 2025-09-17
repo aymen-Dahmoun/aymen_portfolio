@@ -3,6 +3,7 @@ import ProjectCard from "./ProjectCard";
 import Modal from "./ProjectModal";
 import { SiReact, SiNestjs, SiPrisma, SiFlutter, SiNextdotjs, SiNodedotjs, SiVite, SiTailwindcss, SiFirebase, SiDjango, SiPython, SiFlask } from "react-icons/si";
 import type { IconType } from "react-icons";
+import AutoScrollList from "./AutoScrollList";
 
 export interface Tech {
   name: string;
@@ -106,7 +107,7 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<(typeof projects)[0] | null>(null);
 
   return (
-    <section className="relative flex flex-col items-center justify-center py-20">
+    <section className="relative flex flex-col items-center justify-center pt-20">
       <h2 className="text-4xl font-bold text-white mb-12">Projects</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 relative">
@@ -125,9 +126,12 @@ export default function Projects() {
             />
           </div>
         ))}
+
+      </div>
+      <div className="py-20 w-screen flex items-end inset-0 h-96 bg-gradient-to-t from-black via-black/60 to-transparent" >
+        <AutoScrollList />
       </div>
 
-      {/* Modal */}
       <Modal open={open} onOpenChange={setOpen} project={selectedProject} />
     </section>
   );

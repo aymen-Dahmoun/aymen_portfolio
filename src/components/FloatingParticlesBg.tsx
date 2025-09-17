@@ -3,49 +3,48 @@ import Particles from "react-tsparticles";
 import type { Engine } from "tsparticles-engine";
 import { loadSlim } from "tsparticles-slim";
 
-interface ConstellationBackgroundProps {
+interface MilestoneBackgroundProps {
   number?: number;
 }
 
-export default function ConstellationBackground({ number = 150 }: ConstellationBackgroundProps) {
+export default function MilestoneBackground({ number = 80 }: MilestoneBackgroundProps) {
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadSlim(engine);
   }, []);
 
   return (
     <Particles
-      id="tsparticles"
+      id="milestone-particles"
       init={particlesInit}
-      className="absolute inset-0 -z-10 bg-black"
+      className="absolute inset-0 -z-10 bg-gradient-to-bl from-blue-800/20 via-black to-blue-800/20" // dark blue theme
       options={{
         background: { color: "transparent" },
         fpsLimit: 60,
         interactivity: {
           events: {
-            onHover: { enable: true, mode: "repulse" },
+            onHover: { enable: true, mode: "grab" },
             resize: true,
           },
-          modes: { repulse: { distance: 80, duration: 0.1 } },
+          modes: { grab: { distance: 120, links: { opacity: 0.5 } } },
         },
         particles: {
-          color: { value: "#6366f1" },
+          color: { value: "#3b82f6" }, // glowing blue
           links: {
-            color: "#6366f1",
-            distance: 200,
+            color: "#3b82f6",
+            distance: 150,
             enable: true,
-            opacity: 0.3,
-            width: 0.5,
-            random: true,
+            opacity: 0.2,
+            width: 0.6,
           },
           move: {
             enable: true,
-            speed: 1.2,
+            speed: 0.6, // slower for calmer vibe
             outModes: { default: "out" },
           },
           number: { value: number, density: { enable: true, area: 800 } },
-          opacity: { value: 0.5 },
-          shape: { type: ["circle", "triangle", "edge", "polygon"] },
-          size: { value: { min: 1, max: 3 } },
+          opacity: { value: { min: 0.3, max: 0.7 } },
+          shape: { type: ["circle", "star"] },
+          size: { value: { min: 1.5, max: 4 } },
         },
         detectRetina: true,
       }}

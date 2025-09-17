@@ -1,6 +1,9 @@
 import ConstellationBackground from "../components/ConstellationBackground.tsx";
+import Roadmap from "../components/Milestones.tsx";
 import Projects from "../components/Projects.tsx";
 import TechIUse from "../components/TechIUse.tsx";
+
+
 
 
 export default function Home() {
@@ -12,6 +15,8 @@ export default function Home() {
       </div>
       <TechIUse />
       <Projects />
+      <Roadmap />
+      
     </div>
   );
 }

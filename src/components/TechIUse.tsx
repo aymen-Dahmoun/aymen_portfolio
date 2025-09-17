@@ -61,7 +61,7 @@ export default function TechIUse() {
     const getCurrent = (list: Tech[]) => list[index % list.length];
     
     return (
-        <main className="flex-1 z-10 flex flex-col items-center justify-center">
+        <main className="flex-1 z-10 flex flex-col items-center pt-24 justify-center">
             <h1 className="text-4xl font-bold">What I Use</h1>
             <span className="text-1xl font-light mb-12">Here are my main stack that I use to bring up ideas to life, from frontend to backend or even AI</span>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
