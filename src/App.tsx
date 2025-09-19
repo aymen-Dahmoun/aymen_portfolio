@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import Drawer from "./components/Drawer";
-import Navbar from "./components/Navbar.tsx";
-import Home from "./screens/Home.tsx";
-import Footer from "./components/Footer.tsx";
+import Navbar from "./components/Navbar";
+import Home from "./screens/Home";
+import Footer from "./components/Footer";
 
 export default function App() {
   const [isOpen, setIsOpen] = useState(true);
@@ -18,7 +18,7 @@ export default function App() {
   }, []);
 
 return (
-  <div>
+  <div className="flax no-scr" >
     <Navbar onMenuClick={() => setIsOpen(true)} />
     <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} />
     <Home />
