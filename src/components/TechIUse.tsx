@@ -1,5 +1,5 @@
 import { useEffect, useState, type JSX } from "react";
-import TechCard from "../components/TechCard.tsx";
+import TechCard from "../components/TechCard";
 import {
   SiReact,
   SiRedux,
