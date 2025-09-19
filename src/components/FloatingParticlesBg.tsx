@@ -16,7 +16,7 @@ export default function MilestoneBackground({ number = 80 }: MilestoneBackground
     <Particles
       id="milestone-particles"
       init={particlesInit}
-      className="absolute inset-0 -z-10 bg-gradient-to-bl from-blue-800/20 via-black to-blue-800/20" // dark blue theme
+      className="absolute inset-0 -z-10 bg-gradient-to-bl from-blue-800/20 via-black to-blue-800/20"
       options={{
         background: { color: "transparent" },
         fpsLimit: 60,

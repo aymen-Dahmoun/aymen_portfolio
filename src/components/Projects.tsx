@@ -69,7 +69,7 @@ const projects: {
     images: [flixflex1, flixflex2, flixflex3, flixflex4],
     links: {
       github: "https://github.com/aymen-Dahmoun/Flix_Flex",
-      website: "#",
+      website: "",
     },
   },
   {
@@ -87,7 +87,7 @@ const projects: {
     images: [ xvert1, xvert2, xvert3, xvert4, xvert5 ],
     links: {
       github: "https://github.com/aymen-Dahmoun/fullStack_chatApp",
-      website: "#",
+      website: "",
     },
   },
   {
@@ -103,7 +103,7 @@ const projects: {
     images: [ mood1, mood2, mood3, mood4 ],
     links: {
       github: "https://github.com/aymen-Dahmoun/Mood_Tracker",
-      website: "#",
+      website: "",
     },
   },
   {
@@ -135,12 +135,12 @@ const projects: {
     image: meyCover,
     images: [ mey1, mey2, mey3, mey4 ],
     links: {
-      github: "#",
+      github: "",
       website: "https://www.meyouchshop.me/",
     },
   },
   {
-    name: "WatchWave",
+    name: "Fatourati",
     description: "An invoice generator offline app, powered by seamless forms, dark/light mode, and local storage for frequent products with typing suggessions",
     stack: [
       { name: "React Native", icon: SiReact },
@@ -152,7 +152,7 @@ const projects: {
     images: [ fatoura1, fatoura2, fatoura3 ],
     links: {
       github: "https://github.com/aymen-Dahmoun/invoce_generator",
-      website: "#",
+      website: "",
     },
   },
 ];

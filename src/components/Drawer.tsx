@@ -88,7 +88,7 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose }) => {
         <div className="absolute bottom-0 left-0 w-[28rem] h-[28rem] bg-blue-800 rounded-full blur-[160px] animate-pulse pointer-events-none z-0"></div>
 
         <div className="relative z-10 flex flex-col md:flex-row items-center justify-center w-full max-w-6xl gap-12 py-12">
-          <CometCard className="order-1 md:order-2 w-56 md:w-80 shrink-0 cursor-default rounded-2xl overflow-visible">
+          <CometCard className="order-1 mt-[20rem] md:mt-0 md:order-2 w-56 md:w-80 shrink-0 cursor-default rounded-2xl overflow-visible">
             <div className="flex flex-col items-center w-full h-full">
               <div className="w-full aspect-square">
                 <img

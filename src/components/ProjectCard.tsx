@@ -5,8 +5,8 @@ import type { Tech } from "./Projects";
 interface ProjectCardProps {
   name: string;
   stack: Tech[];
-  image: string; // cover image
-  onClick?: () => void; // 🔹 added
+  image: string;
+  onClick?: () => void;
 }
 
 export default function ProjectCard({ name, stack, image, onClick }: ProjectCardProps) {
@@ -29,7 +29,7 @@ export default function ProjectCard({ name, stack, image, onClick }: ProjectCard
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      onClick={onClick} // 🔹 opens modal
+      onClick={onClick}
     >
       {hovered && (
         <div
@@ -40,12 +40,10 @@ export default function ProjectCard({ name, stack, image, onClick }: ProjectCard
         />
       )}
 
-      {/* Project Image */}
       <div className="w-full h-40 bg-gray-900 overflow-hidden">
         <img src={image} alt={name} className="w-full h-full object-cover" />
       </div>
 
-      {/* Content */}
       <div className="p-4 relative z-10">
         <h3 className="text-lg font-semibold text-white mb-2">{name}</h3>
         <div className="flex flex-wrap gap-2">

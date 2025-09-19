@@ -43,7 +43,7 @@ const milestones = [
 
 export default function Milestones() {
   return (
-    <div className="relative min-h-screen bg-gradient-to-bl from-black via-transparent to-blue-500/10 pt-0">
+    <div className="relative min-h-screen w-screen justify-center items-center bg-gradient-to-bl from-black via-transparent to-blue-500/10 pt-0">
       <MilestoneBackground number={80} />
         <div className="py-20 top-0 inset-0 h-[40rem] bg-gradient-to-b from-black via-black/60 to-transparent" />
 
