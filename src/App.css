@@ -3,7 +3,9 @@
   margin: 0 auto;
   padding: 0;
   text-align: center;
-  overflow-x: hidden;
+  overflow: hidden;
+  background-color: black;
+
 }
 
 .logo {

@@ -183,7 +183,7 @@ export default function Projects() {
         ))}
 
       </div>
-      <div className="py-20 w-screen flex items-end inset-0 h-96 bg-gradient-to-t from-black via-black/60 to-transparent" >
+      <div className="py-20 w-screen overflow-x-hidden flex items-end inset-0 h-96 bg-gradient-to-t from-black via-black/60 to-transparent" >
         <AutoScrollList />
       </div>
 

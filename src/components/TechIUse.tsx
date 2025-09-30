@@ -75,7 +75,7 @@ export default function TechIUse() {
     const getCurrent = (list: Tech[]) => list[index % list.length];
     
     return (
-        <main className="flex-1 z-10 gap-12 flex flex-col items-center pt-24 mb-52 justify-center">
+        <main className="flex-1 z-10 gap-12 flex text-neutral-100 flex-col items-center pt-24 mb-52 justify-center">
             <h1 className="text-4xl font-bold">What I Use</h1>
             <span className="text-lg font-light mb-16 max-w-2xl text-center">
               These are the technologies I rely on to transform ideas into real products

@@ -80,7 +80,7 @@ function DialogContent({
                        disabled:pointer-events-none [&_svg]:pointer-events-none 
                        [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4"
           >
-            <XIcon />
+            <XIcon color="white" />
             <span className="sr-only">Close</span>
           </DialogPrimitive.Close>
         )}

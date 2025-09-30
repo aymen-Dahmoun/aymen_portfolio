@@ -30,7 +30,7 @@ const TECHNOLOGIES: Tech[] = [
   { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
   { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
   { name: "Node.js", icon: <SiNodedotjs className="text-green-500" /> },
-  { name: "Express.js", icon: <SiExpress className="text-gray-600 dark:text-gray-200" /> },
+  { name: "Express.js", icon: <SiExpress className="text-gray-200" /> },
   { name: "PostgreSQL", icon: <SiPostgresql className="text-sky-600" /> },
   { name: "MySQL", icon: <SiMysql className="text-blue-600" /> },
   { name: "Python", icon: <SiPython className="text-yellow-500" /> },
@@ -52,7 +52,7 @@ export default function AutoScrollList({ items = TECHNOLOGIES }: { items?: Tech[
       {items.map((tech, index) => (
         <div
           key={index}
-          className="flex items-center gap-2 px-6 text-lg font-semibold text-gray-800 dark:text-gray-200"
+          className="flex items-center gap-2 px-6 text-lg font-semibold text-gray-200"
         >
           <span className="text-2xl">{tech.icon}</span>
           {tech.name}
