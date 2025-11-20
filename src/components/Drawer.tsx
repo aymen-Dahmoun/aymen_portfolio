@@ -1,7 +1,8 @@
 import React, { useRef, useEffect } from "react";
 import { CometCard } from "./CometCard";
 import mouaine from "../assets/mouaine.jpg";
-import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
+import resume from "../assets/DAHMOUN Mouaine Aymen.pdf"
+import { FaEnvelope, FaGithub, FaLinkedin, FaRegSave } from "react-icons/fa";
 
 interface DrawerProps {
   isOpen: boolean;
@@ -71,6 +72,7 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose }) => {
 
   return (
     <>
+
       <div
         className={`fixed inset-0 z-40 bg-black/40 transition-opacity duration-300 ${
           isOpen
@@ -79,6 +81,11 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose }) => {
         }`}
         onClick={onClose}
       />
+
+        {isOpen && 
+          <div className="absolute top-10 left-11/12 -translate-x-1/2 text-gray-300 text-sm animate-bounce pointer-events-none select-none z-[9999]">
+            ↓ Scroll
+          </div>}
 
       <div
         ref={drawerRef}
@@ -181,6 +188,15 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose }) => {
                     className="hover:text-red-400 transition-colors"
                   >
                     <FaEnvelope size={28} />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={resume}
+                    download="Aymen-Dahmoun-Resume.pdf"
+                    className="hover:text-red-400 transition-colors"
+                  >
+                    <FaRegSave size={28} />
                   </a>
                 </li>
               </ul>

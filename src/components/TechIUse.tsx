@@ -68,7 +68,7 @@ export default function TechIUse() {
     useEffect(() => {
         const interval = setInterval(() => {
           setIndex((prev) => prev + 1);
-        }, 5000);
+        }, 2000);
         return () => clearInterval(interval);
     }, []);
     
