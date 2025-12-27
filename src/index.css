@@ -15,6 +15,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #3714FF #172036;
+} 
+
 a {
   font-weight: 500;
   color: #646cff;
