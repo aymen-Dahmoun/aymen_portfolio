@@ -102,3 +102,11 @@ button:focus-visible {
 .floating {
   animation: float 6s ease-in-out infinite;
 }
+
+.perspective-distant {
+  perspective: 1000px;
+}
+
+.transform-3d {
+  transform-style: preserve-3d;
+}
