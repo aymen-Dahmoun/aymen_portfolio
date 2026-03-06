@@ -24,8 +24,8 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
 
   return (
     <nav
-      className="fixed top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-3xl 
-      flex items-center justify-between px-6 py-3 bg-gray-900/20 
+      className="fixed top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-3xl
+      flex items-center justify-between px-6 py-3 bg-gray-900/20
       backdrop-blur-md shadow-lg rounded-2xl z-50 border border-white/20"
     >
       <span
@@ -40,10 +40,10 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
           <span
             key={section.id}
             onClick={() => handleScroll(section.id)}
-            className="relative cursor-pointer text-gray-300 
-             hover:text-indigo-400 transition-colors 
-              after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-[2px] 
-            after:bg-indigo-400 after:transition-all 
+            className="relative cursor-pointer text-gray-300
+             hover:text-indigo-400 transition-colors
+              after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-[2px]
+            after:bg-indigo-400 after:transition-all
               after:duration-300 hover:after:w-full"
           >
             {section.label}
@@ -51,7 +51,7 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
         ))}
         <span
           onClick={onMenuClick}
-          className="px-3 py-1 rounded-lg bg-indigo-600 text-white text-sm cursor-pointer hover:bg-indigo-700 transition-colors"
+          className="px-3 py-1 rounded-lg bg-indigo-600 text-white text-sm cursor-pointer hover:bg-indigo-500 transition-colors"
         >
           Menu
         </span>
@@ -65,8 +65,8 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
       </span>
 
       <div
-        className={`absolute top-full mt-2 right-0 w-48 bg-gray-900 
-        rounded-xl shadow-lg border border-white/20 py-3 flex flex-col gap-3 text-sm font-medium 
+        className={`absolute top-full mt-2 right-0 w-48 bg-gray-900
+        rounded-xl shadow-lg border border-white/20 py-3 flex flex-col gap-3 text-sm font-medium
         transform transition-all duration-300 origin-top
         ${mobileOpen ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0 pointer-events-none"}`}
       >
@@ -74,7 +74,7 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
           <span
             key={section.id}
             onClick={() => handleScroll(section.id)}
-            className="px-4 py-2 cursor-pointer text-gray-300 
+            className="px-4 py-2 cursor-pointer text-gray-300
             hover:bg-indigo-600 hover:text-white rounded-lg transition"
           >
             {section.label}

@@ -190,7 +190,7 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose }) => {
                   <h1 className="text-5xl md:text-7xl font-black">
                     DAHMOUN
                     <br />
-                    <span className="text-blue-400">Mouaine Aymen</span>
+                    <span className="text-indigo-500">Mouaine Aymen</span>
                   </h1>
                 </motion.div>
 
@@ -249,7 +249,7 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose }) => {
                         target="_blank"
                         rel="noopener noreferrer"
                         download={link.download}
-                        className={`text-slate-400 transition-colors ${link.color}`}
+                        className={`text-indigo-500 transition-colors ${link.color}`}
                       >
                         <link.icon size={32} />
                       </a>
