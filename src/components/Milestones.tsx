@@ -41,14 +41,12 @@ const milestones = [
   },
 ];
 
-
 export default function Milestones() {
-
   const device = useDevice();
   return (
     <div className="relative min-h-screen w-screen justify-center items-center bg-gradient-to-bl from-black via-transparent to-blue-500/10 pt-0">
-      { device !== "mobile" && <MilestoneBackground number={80} />}
-        <div className="py-20 top-0 inset-0 h-[40rem] bg-gradient-to-b from-black via-black/60 to-transparent" />
+      {device !== "mobile" && <MilestoneBackground number={80} />}
+      <div className="py-20 top-0 inset-0 h-[40rem] bg-gradient-to-b from-black via-black/60 to-transparent" />
 
       <h2 className="text-center text-4xl font-bold text-blue-300 mb-12">
         My Cosmic Journey
@@ -64,13 +62,15 @@ export default function Milestones() {
             className="relative flex flex-col items-center text-center mb-16"
           >
             <div className="w-8 h-8 rounded-full bg-blue-400 shadow-[0_0_20px_5px_rgba(59,130,246,0.7)] mb-4"></div>
-            
+
             {index < milestones.length - 1 && (
               <div className="w-1 h-16 bg-gradient-to-b from-blue-400/70 to-transparent"></div>
             )}
 
             <div className="bg-[#101c3d]/80 backdrop-blur-md p-6 rounded-2xl shadow-lg border border-blue-500/30 max-w-sm">
-              <h3 className="text-xl text-blue-200 font-semibold">{milestone.year} – {milestone.title}</h3>
+              <h3 className="text-xl text-blue-200 font-semibold">
+                {milestone.year} – {milestone.title}
+              </h3>
               <p className="text-gray-300 mt-2">{milestone.description}</p>
             </div>
           </motion.div>
