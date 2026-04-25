@@ -39,6 +39,13 @@ const getMilestones = (t: any) => [
     title: t("milestones.m2026.title"),
     description: t("milestones.m2026.description"),
   },
+  {
+    year: "2026",
+    title: "Backend Developer",
+    description:
+      "Started working as a backend developer at Slickpay with Node.js, Also built full-stack projects combining backend and frontend technologies.",
+  },
+
 ];
 
 export default function Milestones() {
