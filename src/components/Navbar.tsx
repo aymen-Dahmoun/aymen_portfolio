@@ -49,12 +49,6 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
             {section.label}
           </span>
         ))}
-        <span
-          onClick={onMenuClick}
-          className="px-3 py-1 rounded-lg bg-indigo-600 text-white text-sm cursor-pointer hover:bg-indigo-500 transition-colors"
-        >
-          Menu
-        </span>
       </div>
 
       <span
@@ -80,12 +74,6 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
             {section.label}
           </span>
         ))}
-        <span
-          onClick={onMenuClick}
-          className="mx-4 px-3 py-2 rounded-lg bg-indigo-600 text-white text-sm cursor-pointer hover:bg-indigo-700 transition-colors"
-        >
-          Menu
-        </span>
       </div>
     </nav>
   );

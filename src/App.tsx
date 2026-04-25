@@ -17,12 +17,16 @@ export default function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-return (
-  <div className="flax no-scr" >
-    <Navbar onMenuClick={() => setIsOpen(true)} />
-    <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} />
-    <Home />
-    <Footer />
-  </div>
-);
+  return (
+    <div className="flax no-scr" >
+      <Navbar onMenuClick={() => setIsOpen(true)} />
+      <Drawer
+        isOpen={isOpen}
+        onOpen={() => setIsOpen(true)}
+        onClose={() => setIsOpen(false)}
+      />
+      <Home />
+      <Footer />
+    </div>
+  );
 }

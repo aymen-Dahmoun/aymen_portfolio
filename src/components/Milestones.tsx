@@ -39,6 +39,13 @@ const milestones = [
     description:
       "Focused on mobile development with React Native and web development with React. Also built full-stack projects combining backend and frontend technologies.",
   },
+  {
+    year: "2026",
+    title: "Backend Developer",
+    description:
+      "Started working as a backend developer at Slickpay with Node.js, Also built full-stack projects combining backend and frontend technologies.",
+  },
+
 ];
 
 export default function Milestones() {
@@ -46,7 +53,6 @@ export default function Milestones() {
   return (
     <div className="relative min-h-screen w-screen justify-center items-center bg-gradient-to-bl from-black via-transparent to-blue-500/10 pt-0">
       {device !== "mobile" && <MilestoneBackground number={80} />}
-      <div className="py-20 top-0 inset-0 h-[40rem] bg-gradient-to-b from-black via-black/60 to-transparent" />
 
       <h2 className="text-center text-4xl font-bold text-blue-300 mb-12">
         My Cosmic Journey
@@ -61,17 +67,21 @@ export default function Milestones() {
             viewport={{ once: true }}
             className="relative flex flex-col items-center text-center mb-16"
           >
-            <div className="w-8 h-8 rounded-full bg-blue-400 shadow-[0_0_20px_5px_rgba(59,130,246,0.7)] mb-4"></div>
+            <div className="w-8 h-8 rounded-full bg-indigo-500 shadow-[0_0_20px_5px_rgba(99,102,241,0.5)] mb-4 border-2 border-white/20"></div>
 
             {index < milestones.length - 1 && (
-              <div className="w-1 h-16 bg-gradient-to-b from-blue-400/70 to-transparent"></div>
+              <div className="w-1 h-20 bg-gradient-to-b from-indigo-500 via-indigo-500/50 to-transparent"></div>
             )}
 
-            <div className="bg-[#101c3d]/80 backdrop-blur-md p-6 rounded-2xl shadow-lg border border-blue-500/30 max-w-sm">
-              <h3 className="text-xl text-blue-200 font-semibold">
-                {milestone.year} – {milestone.title}
+            <div className="group bg-slate-900/40 backdrop-blur-xl p-8 rounded-[2rem] shadow-2xl border border-white/10 hover:border-indigo-500/50 transition-all duration-500 max-w-sm relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <h3 className="text-2xl text-indigo-300 font-bold mb-3">
+                {milestone.year}
               </h3>
-              <p className="text-gray-300 mt-2">{milestone.description}</p>
+              <h4 className="text-xl text-blue-100 font-semibold mb-2">
+                {milestone.title}
+              </h4>
+              <p className="text-gray-400 leading-relaxed">{milestone.description}</p>
             </div>
           </motion.div>
         ))}
