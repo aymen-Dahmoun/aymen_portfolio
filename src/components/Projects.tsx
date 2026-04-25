@@ -193,9 +193,11 @@ export default function Projects() {
         ))}
       </div>
 
-      <AutoScrollList />
+      <div className="w-full overflow-hidden">
+        <AutoScrollList />
+      </div>
 
       <Modal open={open} onOpenChange={setOpen} project={selectedProject} />
     </section>
   );
-} 
+}
