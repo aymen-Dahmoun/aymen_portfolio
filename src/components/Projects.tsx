@@ -19,6 +19,7 @@ import {
 import type { IconType } from "react-icons";
 import AutoScrollList from "./AutoScrollList";
 import { FaDatabase, FaNodeJs, FaTelegram } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 import flixflexCover from "../assets/flixflexCover.jpg";
 import flixflex1 from "../assets/flixflex1.jpg";
 import flixflex2 from "../assets/flixflex2.jpg";
@@ -59,18 +60,10 @@ export interface Link {
   website: string;
 }
 
-const projects: {
-  name: string;
-  description: string;
-  stack: Tech[];
-  image: string;
-  images: string[];
-  links: Link;
-}[] = [
+const getProjectsData = (t: any) => [
   {
-    name: "Flix Flex",
-    description:
-      "A mobile application with modern UI, lets users explore all types of shows, with authentication and a recommendation system for best experience",
+    name: t("projects.flixFlex.name"),
+    description: t("projects.flixFlex.description"),
     stack: [
       { name: "React Native", icon: SiReact },
       { name: "Firebase", icon: SiFirebase },
@@ -86,9 +79,8 @@ const projects: {
     },
   },
   {
-    name: "XVert",
-    description:
-      "A full stack chat app with full features, supports video calls, developed from scratch, powered by light and dark theme",
+    name: t("projects.xVert.name"),
+    description: t("projects.xVert.description"),
     stack: [
       { name: "React Native", icon: SiReact },
       { name: "PostgreSQL", icon: SiPostgresql },
@@ -105,9 +97,8 @@ const projects: {
     },
   },
   {
-    name: "MooD",
-    description:
-      "A modern app that helps you track your mood jumps over the day, and analyse them through diffrent plots, powered by Gemini API as a pyschological assistant",
+    name: t("projects.mooD.name"),
+    description: t("projects.mooD.description"),
     stack: [
       { name: "React Native", icon: SiReact },
       { name: "Asyncstorage", icon: FaDatabase },
@@ -122,9 +113,8 @@ const projects: {
     },
   },
   {
-    name: "Nex",
-    description:
-      "A very fancy website for a cybersecurity club, made by real passion",
+    name: t("projects.nex.name"),
+    description: t("projects.nex.description"),
     stack: [
       { name: "React", icon: SiReact },
       { name: "Emailjs", icon: SiGmail },
@@ -138,9 +128,8 @@ const projects: {
     },
   },
   {
-    name: "Meyouch Shop",
-    description:
-      "An E-commerce website for girly products, smooth, user friendly, powered by a mobile application for a dashbored",
+    name: t("projects.meyouchShop.name"),
+    description: t("projects.meyouchShop.description"),
     stack: [
       { name: "React Native", icon: SiReact },
       { name: "React", icon: SiReact },
@@ -157,9 +146,8 @@ const projects: {
     },
   },
   {
-    name: "Fatourati",
-    description:
-      "An invoice generator offline app, powered by seamless forms, dark/light mode, and local storage for frequent products with typing suggessions",
+    name: t("projects.fatourati.name"),
+    description: t("projects.fatourati.description"),
     stack: [
       { name: "React Native", icon: SiReact },
       { name: "Expo", icon: SiExpo },
@@ -176,14 +164,16 @@ const projects: {
 ];
 
 export default function Projects() {
+  const { t } = useTranslation();
   const [open, setOpen] = useState(false);
+  const projects = getProjectsData(t);
   const [selectedProject, setSelectedProject] = useState<
     (typeof projects)[0] | null
   >(null);
 
   return (
     <section className="relative flex flex-col items-center justify-center pt-20">
-      <h2 className="text-4xl font-bold text-white mb-12">Projects</h2>
+      <h2 className="text-4xl font-bold text-white mb-12">{t("projects.title")}</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 relative">
         {projects.map((project, i) => (
@@ -202,11 +192,10 @@ export default function Projects() {
           </div>
         ))}
       </div>
-      <div className="py-20 w-screen overflow-x-hidden flex items-end inset-0 h-96 bg-gradient-to-t from-black via-black/60 to-transparent">
-        <AutoScrollList />
-      </div>
+
+      <AutoScrollList />
 
       <Modal open={open} onOpenChange={setOpen} project={selectedProject} />
     </section>
   );
-}
+} 

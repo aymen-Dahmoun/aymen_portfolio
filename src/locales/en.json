@@ -1,0 +1,134 @@
+{
+    "meta": {
+        "title": "DAHMOUN Mouaine Aymen | Developer",
+        "description": "Portfolio of DAHMOUN Mouaine Aymen — a passionate developer specializing in Mobile, Web, and Desktop Development, PERN stack, Automation, and DevOps."
+    },
+    "navbar": {
+        "tech": "Tech",
+        "projects": "Projects",
+        "roadmap": "Roadmap",
+        "home": "Home"
+    },
+    "footer": {
+        "bio": "Passionate Fullstack Developer dedicated to creating innovative digital solutions. Combining technical excellence with creative strategy to build impactful web and mobile experiences.",
+        "sitemap": "Sitemap",
+        "getInTouch": "Get in Touch",
+        "email": "Email",
+        "location": "Location",
+        "algeriaAlgiers": "Algeria, Algiers",
+        "currentAvailability": "Current Availability",
+        "openForHire": "Open for hire",
+        "availabilityBio": "I'm currently looking for new opportunities and interesting projects to collaborate on.",
+        "letsTalk": "Let's Talk",
+        "allRightsReserved": "© {{year}} AYMEN DAHMOUN. All rights reserved.",
+        "builtWith": "Built with React & Framer Motion"
+    },
+    "home": {
+        "whatIUse": "What I Use",
+        "techSubtitle": "These are the technologies I rely on to transform ideas into real products whether it’s crafting beautiful web apps, cross-platform mobile experiences, robust backends, or exploring AI.",
+        "web": "Web",
+        "mobile": "Mobile",
+        "backend": "Backend",
+        "ai": "AI"
+    },
+    "tech": {
+        "react": "Frontend UI library",
+        "redux": "State management",
+        "tailwindcss": "Utility-first CSS",
+        "typescript": "Type-safe JS",
+        "javascript": "just JS",
+        "threeJS": "3D Web",
+        "reactNative": "Cross-platform apps",
+        "predictableState": "Predictable state",
+        "devOps": "DevOps",
+        "jsRuntime": "JS runtime",
+        "minimalistFramework": "Minimalist framework",
+        "relationalDB": "Relational DB",
+        "sqlDatabase": "SQL database",
+        "favoriteBaaS": "favorite BaaS",
+        "secondFavoriteBaaS": "Second favorite BaaS",
+        "aiMLDev": "AI & ML development",
+        "pythonWebFramework": "Python web framework",
+        "workflowAutomation": "Workflow automation",
+        "integrationService": "Integration service"
+    },
+    "projects": {
+        "title": "Projects",
+        "details": "Project details and technology stack",
+        "description": "Description",
+        "techStack": "Tech Stack",
+        "links": "Links",
+        "github": "Github",
+        "visitWebsite": "Visit website:",
+        "screenshots": "Screenshots",
+        "flixFlex": {
+            "name": "Flix Flex",
+            "description": "A mobile application with modern UI, lets users explore all types of shows, with authentication and a recommendation system for best experience"
+        },
+        "xVert": {
+            "name": "XVert",
+            "description": "A full stack chat app with full features, supports video calls, developed from scratch, powered by light and dark theme"
+        },
+        "mooD": {
+            "name": "MooD",
+            "description": "A modern app that helps you track your mood jumps over the day, and analyse them through diffrent plots, powered by Gemini API as a pyschological assistant"
+        },
+        "nex": {
+            "name": "Nex",
+            "description": "A very fancy website for a cybersecurity club, made by real passion"
+        },
+        "meyouchShop": {
+            "name": "Meyouch Shop",
+            "description": "An E-commerce website for girly products, smooth, user friendly, powered by a mobile application for a dashbored"
+        },
+        "fatourati": {
+            "name": "Fatourati",
+            "description": "An invoice generator offline app, powered by seamless forms, dark/light mode, and local storage for frequent products with typing suggessions"
+        }
+    },
+    "milestones": {
+        "title": "My Cosmic Journey",
+        "m2022": {
+            "title": "First Steps",
+            "description": "Began exploring problem-solving and strategy. Earned 2nd place in the regional chess championship, which boosted my confidence and discipline."
+        },
+        "m2023_1": {
+            "title": "Academic Achievement",
+            "description": "Successfully graduated with a BAC degree scoring 16.40/20. Enrolled as a Computer Science student at the Higher School of Advanced Technologies."
+        },
+        "m2023_2": {
+            "title": "Creative Exploration",
+            "description": "Explored different areas of computer science and worked in graphic design, including social media visuals and logo design projects."
+        },
+        "m2024": {
+            "title": "Software Development Journey",
+            "description": "Dove into software projects: built automation tools with Python, experimented with automated trading systems, and developed mobile apps with Kotlin and React Native."
+        },
+        "m2025_early": {
+            "title": "Android Development Certification",
+            "description": "Achieved an official Android Development Certificate, strengthening my skills in mobile app development and solidifying my path as a developer."
+        },
+        "m2025": {
+            "title": "Full-Stack Development",
+            "description": "Focused on mobile development with React Native and web development with React. Also built full-stack projects combining backend and frontend technologies."
+        },
+        "m2026": {
+            "title": "Backend Developer",
+            "description": "Started working as a backend developer at Slickpay with Node.js, Also built full-stack projects combining backend and frontend technologies."
+        },
+        "early": "Early"
+    },
+    "drawer": {
+        "dragOrScroll": "← Drag or Scroll ↓",
+        "imaginationReality": "I bridge the gap between imagination and reality by crafting premium digital experiences.",
+        "coreExpertise": "Core Expertise",
+        "skills": {
+            "mobile": "Mobile Development",
+            "web": "Web Development",
+            "desktop": "Desktop Development",
+            "pern": "PERN Stack",
+            "automation": "Automation",
+            "devops": "DevOps"
+        }
+    }
+}

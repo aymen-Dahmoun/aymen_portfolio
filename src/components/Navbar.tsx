@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 interface NavbarProps {
   onMenuClick: () => void;
@@ -7,11 +9,13 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { t, i18n } = useTranslation();
+  const isRTL = i18n.dir() === "rtl";
 
   const sections = [
-    { id: "tech", label: "Tech" },
-    { id: "projects", label: "Projects" },
-    { id: "roadmap", label: "Roadmap" },
+    { id: "tech", label: t("navbar.tech") },
+    { id: "projects", label: t("navbar.projects") },
+    { id: "roadmap", label: t("navbar.roadmap") },
   ];
 
   const handleScroll = (id: string) => {
@@ -35,7 +39,7 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
         DM
       </span>
 
-      <div className="hidden md:flex gap-6 text-sm font-medium">
+      <div className="hidden md:flex items-center gap-6 text-sm font-medium">
         {sections.map((section) => (
           <span
             key={section.id}
@@ -49,23 +53,22 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
             {section.label}
           </span>
         ))}
+        <div className="w-[1px] h-4 bg-white/10 mx-2" />
+        <LanguageSwitcher />
+      </div>
+
+      <div className="md:hidden flex items-center gap-4">
+        <LanguageSwitcher />
         <span
-          onClick={onMenuClick}
-          className="px-3 py-1 rounded-lg bg-indigo-600 text-white text-sm cursor-pointer hover:bg-indigo-500 transition-colors"
+          className="rounded-lg text-gray-700  hover:bg-gray-200/20"
+          onClick={() => setMobileOpen(!mobileOpen)}
         >
-          Menu
+          {mobileOpen ? <X size={22} color="white" /> : <Menu color="white" size={22} />}
         </span>
       </div>
 
-      <span
-        className="md:hidden rounded-lg text-gray-700  hover:bg-gray-200/20"
-        onClick={() => setMobileOpen(!mobileOpen)}
-      >
-        {mobileOpen ? <X size={22} /> : <Menu color="white" size={22} />}
-      </span>
-
       <div
-        className={`absolute top-full mt-2 right-0 w-48 bg-gray-900
+        className={`absolute top-full mt-2 ${isRTL ? "start-0" : "end-0"} w-48 bg-gray-900
         rounded-xl shadow-lg border border-white/20 py-3 flex flex-col gap-3 text-sm font-medium
         transform transition-all duration-300 origin-top
         ${mobileOpen ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0 pointer-events-none"}`}
@@ -80,12 +83,6 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
             {section.label}
           </span>
         ))}
-        <span
-          onClick={onMenuClick}
-          className="mx-4 px-3 py-2 rounded-lg bg-indigo-600 text-white text-sm cursor-pointer hover:bg-indigo-700 transition-colors"
-        >
-          Menu
-        </span>
       </div>
     </nav>
   );

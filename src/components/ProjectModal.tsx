@@ -8,6 +8,7 @@ import {
 import { motion } from "framer-motion";
 import type { Link, Tech } from "./Projects";
 import { FaGithub } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 interface Project {
   name: string;
@@ -24,6 +25,7 @@ interface ModalProps {
 }
 
 const Modal: React.FC<ModalProps> = ({ open, onOpenChange, project }) => {
+  const { t } = useTranslation();
   if (!project) return null;
 
   return (
@@ -41,14 +43,14 @@ const Modal: React.FC<ModalProps> = ({ open, onOpenChange, project }) => {
               {project.name}
             </DialogTitle>
             <DialogDescription className="text-gray-400 text-base">
-              Project details and technology stack
+              {t("projects.details")}
             </DialogDescription>
           </DialogHeader>
 
-          <div className="max-h-[70vh] overflow-y-auto pr-2 space-y-8 mt-6">
+          <div className="max-h-[70vh] overflow-y-auto pe-2 space-y-8 mt-6">
             <section>
               <h3 className="font-semibold text-lg mb-2 text-blue-600">
-                Description
+                {t("projects.description")}
               </h3>
               <p className="text-gray-300 leading-relaxed">
                 {project.description}
@@ -57,7 +59,7 @@ const Modal: React.FC<ModalProps> = ({ open, onOpenChange, project }) => {
 
             <section>
               <h3 className="font-semibold text-lg mb-2 text-blue-600">
-                Tech Stack
+                {t("projects.techStack")}
               </h3>
               <ul className="flex flex-wrap gap-2">
                 {project.stack.map((tech, idx) => (
@@ -76,7 +78,7 @@ const Modal: React.FC<ModalProps> = ({ open, onOpenChange, project }) => {
 
             <section>
               <h3 className="font-semibold text-lg mb-2 text-blue-600">
-                Links
+                {t("projects.links")}
               </h3>
               <div className="flex flex-wrap flex-col gap-4">
                 {project.links.github && (
@@ -86,7 +88,7 @@ const Modal: React.FC<ModalProps> = ({ open, onOpenChange, project }) => {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-blue-400 hover:underline break-all">
                     <FaGithub size={24} className="text-gray-300 hover:text-white transition" />
-                    <span className="flex items-center gap-2">Github</span>
+                    <span className="flex items-center gap-2">{t("projects.github")}</span>
                   </a>
                 )}
                 {project.links.website && (
@@ -96,7 +98,7 @@ const Modal: React.FC<ModalProps> = ({ open, onOpenChange, project }) => {
                     rel="noopener noreferrer"
                     className="text-blue-400 flex items-center gap-2 hover:underline"
                   >
-                    <span className="flex items-center gap-2 text-neutral-100">Visit website:</span>
+                    <span className="flex items-center gap-2 text-neutral-100">{t("projects.visitWebsite")}</span>
                     {project.links.website}
                   </a>
                 )}
@@ -106,14 +108,14 @@ const Modal: React.FC<ModalProps> = ({ open, onOpenChange, project }) => {
 
             <section>
               <h3 className="font-semibold text-lg mb-2 text-blue-600">
-                Screenshots
+                {t("projects.screenshots")}
               </h3>
-              <div className="flex overflow-x-auto space-x-4 pb-2 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
+              <div className="flex overflow-x-auto gap-4 pb-2 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
                 {project.images.map((src, idx) => (
                   <img
                     key={idx}
                     src={src}
-                    alt={`Screenshot ${idx + 1}`}
+                    alt={`${t("projects.screenshots")} ${idx + 1}`}
                     className="h-48 w-auto rounded-lg border border-white/10 shadow-md object-cover flex-shrink-0"
                   />
                 ))}
