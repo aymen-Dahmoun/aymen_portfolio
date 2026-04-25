@@ -18,7 +18,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="flax no-scr" >
+    <div className="flax" >
       <Navbar onMenuClick={() => setIsOpen(true)} />
       <Drawer
         isOpen={isOpen}

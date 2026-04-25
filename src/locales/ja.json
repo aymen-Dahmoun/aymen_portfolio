@@ -1,0 +1,134 @@
+{
+    "meta": {
+        "title": "DAHMOUN Mouaine Aymen | ソフトウェア開発者",
+        "description": "DAHMOUN Mouaine Aymenのポートフォリオサイト。モバイル、Web、デスクトップ開発を中心に、PERNスタック、自動化、DevOpsにも取り組む開発者です。"
+    },
+    "navbar": {
+        "tech": "技術",
+        "projects": "プロジェクト",
+        "roadmap": "キャリア",
+        "home": "ホーム"
+    },
+    "footer": {
+        "bio": "革新的なデジタルソリューションの開発に取り組むフルスタック開発者です。技術力と創造性を活かし、価値のあるWeb・モバイル体験を構築しています。",
+        "sitemap": "サイトマップ",
+        "getInTouch": "お問い合わせ",
+        "email": "メール",
+        "location": "所在地",
+        "algeriaAlgiers": "アルジェリア・アルジェ",
+        "currentAvailability": "現在の状況",
+        "openForHire": "仕事受付中",
+        "availabilityBio": "現在、新しい機会や興味深いプロジェクトを探しています。",
+        "letsTalk": "連絡する",
+        "allRightsReserved": "© {{year}} AYMEN DAHMOUN. All rights reserved.",
+        "builtWith": "React と Framer Motion を使用して構築"
+    },
+    "home": {
+        "whatIUse": "使用技術",
+        "techSubtitle": "アイデアを実際のプロダクトへ形にするために使用している技術です。Web開発、モバイル開発、データベース、AI関連まで幅広く扱っています。",
+        "web": "Web",
+        "mobile": "モバイル",
+        "backend": "バックエンド",
+        "ai": "AI"
+    },
+    "tech": {
+        "react": "UIライブラリ",
+        "redux": "状態管理",
+        "tailwindcss": "CSSフレームワーク",
+        "typescript": "型安全なJavaScript",
+        "javascript": "JavaScript",
+        "threeJS": "3D Web開発",
+        "reactNative": "クロスプラットフォーム開発",
+        "predictableState": "状態管理",
+        "devOps": "DevOps",
+        "jsRuntime": "JavaScript実行環境",
+        "minimalistFramework": "軽量フレームワーク",
+        "relationalDB": "リレーショナルデータベース",
+        "sqlDatabase": "SQLデータベース",
+        "favoriteBaaS": "よく使うBaaS",
+        "secondFavoriteBaaS": "その他のBaaS",
+        "aiMLDev": "AI・機械学習開発",
+        "pythonWebFramework": "Python Webフレームワーク",
+        "workflowAutomation": "ワークフロー自動化",
+        "integrationService": "連携サービス"
+    },
+    "projects": {
+        "title": "プロジェクト",
+        "details": "プロジェクト詳細と使用技術",
+        "description": "概要",
+        "techStack": "技術スタック",
+        "links": "リンク",
+        "github": "GitHub",
+        "visitWebsite": "Webサイトを見る:",
+        "screenshots": "スクリーンショット",
+        "flixFlex": {
+            "name": "Flix Flex",
+            "description": "モダンなUIを備えたモバイルアプリ。認証機能とレコメンド機能を搭載し、さまざまな作品を探索できます。"
+        },
+        "xVert": {
+            "name": "XVert",
+            "description": "ビデオ通話対応の高機能チャットアプリ。ゼロから開発し、ライトモードとダークモードの両方に対応しています。"
+        },
+        "mooD": {
+            "name": "MooD",
+            "description": "日々の気分変化を記録・分析できるアプリ。複数のグラフ機能を備え、Gemini APIを活用したAIアシスタントも搭載しています。"
+        },
+        "nex": {
+            "name": "Nex",
+            "description": "サイバーセキュリティクラブ向けに制作した洗練されたWebサイトです。"
+        },
+        "meyouchShop": {
+            "name": "Meyouch Shop",
+            "description": "女性向け商品のECサイト。使いやすい設計に加え、管理用モバイルアプリも開発しました。"
+        },
+        "fatourati": {
+            "name": "Fatourati",
+            "description": "オフライン対応の請求書作成アプリ。ダーク/ライトモード、ローカル保存、入力補完機能を搭載しています。"
+        }
+    },
+    "milestones": {
+        "title": "これまでの歩み",
+        "m2022": {
+            "title": "最初の一歩",
+            "description": "問題解決と戦略的思考に興味を持ち始め、地域チェス大会で準優勝を獲得。自信と規律を身につけました。"
+        },
+        "m2023_1": {
+            "title": "学業での成果",
+            "description": "高校卒業資格（BAC）を16.40/20で取得し、高等先端技術学校でコンピュータサイエンスを学び始めました。"
+        },
+        "m2023_2": {
+            "title": "創造的な挑戦",
+            "description": "コンピュータサイエンスのさまざまな分野を学びながら、SNS向けデザインやロゴ制作にも取り組みました。"
+        },
+        "m2024": {
+            "title": "ソフトウェア開発への挑戦",
+            "description": "Pythonによる自動化ツールの開発、自動取引システムの実験、KotlinやReact Nativeを使ったモバイル開発に取り組みました。"
+        },
+        "m2025_early": {
+            "title": "Android開発資格取得",
+            "description": "Android開発の公式認定を取得し、モバイル開発のスキルをさらに強化しました。"
+        },
+        "m2025": {
+            "title": "フルスタック開発",
+            "description": "React Nativeでのモバイル開発とReactでのWeb開発に注力し、フルスタックプロジェクトを構築しました。"
+        },
+        "m2026": {
+            "title": "バックエンド開発者",
+            "description": "SlickpayでNode.jsバックエンド開発者として働きながら、フルスタック開発も継続しています。"
+        },
+        "early": "初期"
+    },
+    "drawer": {
+        "dragOrScroll": "← ドラッグ / スクロール ↓",
+        "imaginationReality": "アイデアを価値あるデジタルプロダクトへと形にします。",
+        "coreExpertise": "主な専門分野",
+        "skills": {
+            "mobile": "モバイル開発",
+            "web": "Web開発",
+            "desktop": "デスクトップ開発",
+            "pern": "PERNスタック",
+            "automation": "自動化",
+            "devops": "DevOps"
+        }
+    }
+}

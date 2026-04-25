@@ -1,0 +1,134 @@
+{
+    "meta": {
+        "title": "DAHMOUN Mouaine Aymen | Développeur",
+        "description": "Portfolio de DAHMOUN Mouaine Aymen — un développeur passionné spécialisé dans le développement mobile, web et desktop, la stack PERN, l'automatisation et le DevOps."
+    },
+    "navbar": {
+        "tech": "Tech",
+        "projects": "Projets",
+        "roadmap": "Parcours",
+        "home": "Accueil"
+    },
+    "footer": {
+        "bio": "Développeur Fullstack passionné dédié à la création de solutions numériques innovantes. Combinant l'excellence technique avec une stratégie créative pour construire des expériences web et mobiles percutantes.",
+        "sitemap": "Plan du site",
+        "getInTouch": "Contactez-moi",
+        "email": "E-mail",
+        "location": "Localisation",
+        "algeriaAlgiers": "Algérie, Alger",
+        "currentAvailability": "Disponibilité actuelle",
+        "openForHire": "Disponible pour embauche",
+        "availabilityBio": "Je suis actuellement à la recherche de nouvelles opportunités et de projets intéressants sur lesquels collaborer.",
+        "letsTalk": "Discutons",
+        "allRightsReserved": "© {{year}} AYMEN DAHMOUN. Tous droits réservés.",
+        "builtWith": "Construit avec React & Framer Motion"
+    },
+    "home": {
+        "whatIUse": "Ce que j j'utilise",
+        "techSubtitle": "Ce sont les technologies sur lesquelles je m'appuie pour transformer les idées en produits réels, qu'il s'agisse de créer de belles applications web, des expériences mobiles multiplateformes, des backends robustes ou d'explorer l'IA.",
+        "web": "Web",
+        "mobile": "Mobile",
+        "backend": "Backend",
+        "ai": "IA"
+    },
+    "tech": {
+        "react": "Bibliothèque UI Frontend",
+        "redux": "Gestion d'état",
+        "tailwindcss": "CSS orienté utilité",
+        "typescript": "JS typé",
+        "javascript": "juste JS",
+        "threeJS": "Web 3D",
+        "reactNative": "Apps multiplateformes",
+        "predictableState": "État prévisible",
+        "devOps": "DevOps",
+        "jsRuntime": "Runtime JS",
+        "minimalistFramework": "Framework minimaliste",
+        "relationalDB": "BD Relationnelle",
+        "sqlDatabase": "Base de données SQL",
+        "favoriteBaaS": "BaaS préféré",
+        "secondFavoriteBaaS": "Deuxième BaaS préféré",
+        "aiMLDev": "Développement IA & ML",
+        "pythonWebFramework": "Framework web Python",
+        "workflowAutomation": "Automatisation de workflow",
+        "integrationService": "Service d'intégration"
+    },
+    "projects": {
+        "title": "Projets",
+        "details": "Détails du projet et pile technologique",
+        "description": "Description",
+        "techStack": "Technologies",
+        "links": "Liens",
+        "github": "Github",
+        "visitWebsite": "Visiter le site:",
+        "screenshots": "Captures d'écran",
+        "flixFlex": {
+            "name": "Flix Flex",
+            "description": "Une application mobile with une interface moderne, permet aux utilisateurs d'explorer tous types d'émissions, avec authentification et un système de recommandation pour une meilleure expérience"
+        },
+        "xVert": {
+            "name": "XVert",
+            "description": "Une application de chat full stack with des fonctionnalités complètes, prend en charge les appels vidéo, développée à partir de zéro, alimentée par des thèmes clair et sombre"
+        },
+        "mooD": {
+            "name": "MooD",
+            "description": "Une application moderne qui vous aide à suivre vos changements d'humeur au cours de la journée et à les analyser via différents graphiques, propulsée par l'API Gemini en tant qu'assistant psychologique"
+        },
+        "nex": {
+            "name": "Nex",
+            "description": "Un site web très élégant pour un club de cybersécurité, fait with une réelle passion"
+        },
+        "meyouchShop": {
+            "name": "Meyouch Shop",
+            "description": "Un site e-commerce pour produits féminins, fluide, convivial, alimenté par une application mobile pour un tableau de bord"
+        },
+        "fatourati": {
+            "name": "Fatourati",
+            "description": "Une application de génération de factures hors ligne, alimentée par des formulaires fluides, un mode sombre/clair et un stockage local pour les produits fréquents with suggestions de saisie"
+        }
+    },
+    "milestones": {
+        "title": "Mon Voyage Cosmique",
+        "m2022": {
+            "title": "Premiers pas",
+            "description": "Commencé à explorer la résolution de problèmes et la stratégie. Obtenu la 2ème place au championnat régional d'échecs, ce qui a boosté ma confiance et ma discipline."
+        },
+        "m2023_1": {
+            "title": "Réussite Académique",
+            "description": "Diplômé with succès du BAC with une moyenne de 16.40/20. Inscrit en tant qu'étudiant en informatique à l'École Supérieure des Technologies Avancées."
+        },
+        "m2023_2": {
+            "title": "Exploration Créative",
+            "description": "Exploré différents domaines de l'informatique et travaillé en design graphique, y compris les visuels pour les réseaux sociaux et les projets de conception de logos."
+        },
+        "m2024": {
+            "title": "Parcours Développeur Logiciel",
+            "description": "Plongé dans des projets logiciels : construit des outils d'automatisation with Python, expérimenté des systèmes de trading automatisés et développé des applications mobiles with Kotlin et React Native."
+        },
+        "m2025_early": {
+            "title": "Certification Développement Android",
+            "description": "Obtenu un certificat officiel de développement Android, renforçant mes compétences en développement d'applications mobiles et consolidant mon parcours de développeur."
+        },
+        "m2025": {
+            "title": "Développement Full-Stack",
+            "description": "Concentré sur le développement mobile with React Native et le développement web with React. Également construit des projets full-stack combinant les technologies backend et frontend."
+        },
+        "m2026": {
+            "title": "Développeur Backend",
+            "description": "Commencé à travailler en tant que développeur backend chez Slickpay with Node.js. Également construit des projets full-stack combinant les technologies backend et frontend."
+        },
+        "early": "Début"
+    },
+    "drawer": {
+        "dragOrScroll": "← Glissez ou Défilez ↓",
+        "imaginationReality": "Je comble le fossé entre l'imagination et la réalité en créant des expériences numériques premium.",
+        "coreExpertise": "Expertise Fondamentale",
+        "skills": {
+            "mobile": "Développement Mobile",
+            "web": "Développement Web",
+            "desktop": "Développement Desktop",
+            "pern": "Stack PERN",
+            "automation": "Automatisation",
+            "devops": "DevOps"
+        }
+    }
+}

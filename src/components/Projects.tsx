@@ -19,6 +19,7 @@ import {
 import type { IconType } from "react-icons";
 import AutoScrollList from "./AutoScrollList";
 import { FaDatabase, FaNodeJs, FaTelegram } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 import flixflexCover from "../assets/flixflexCover.jpg";
 import flixflex1 from "../assets/flixflex1.jpg";
 import flixflex2 from "../assets/flixflex2.jpg";
@@ -59,131 +60,120 @@ export interface Link {
   website: string;
 }
 
-const projects: {
-  name: string;
-  description: string;
-  stack: Tech[];
-  image: string;
-  images: string[];
-  links: Link;
-}[] = [
-    {
-      name: "Flix Flex",
-      description:
-        "A mobile application with modern UI, lets users explore all types of shows, with authentication and a recommendation system for best experience",
-      stack: [
-        { name: "React Native", icon: SiReact },
-        { name: "Firebase", icon: SiFirebase },
-        { name: "TMDB API", icon: FaDatabase },
-        { name: "Expo Go", icon: SiExpo },
-        { name: "React Query", icon: SiReactquery },
-      ],
-      image: flixflexCover,
-      images: [flixflex1, flixflex2, flixflex3, flixflex4],
-      links: {
-        github: "https://github.com/aymen-Dahmoun/Flix_Flex",
-        website: "",
-      },
+const getProjectsData = (t: any) => [
+  {
+    name: t("projects.flixFlex.name"),
+    description: t("projects.flixFlex.description"),
+    stack: [
+      { name: "React Native", icon: SiReact },
+      { name: "Firebase", icon: SiFirebase },
+      { name: "TMDB API", icon: FaDatabase },
+      { name: "Expo Go", icon: SiExpo },
+      { name: "React Query", icon: SiReactquery },
+    ],
+    image: flixflexCover,
+    images: [flixflex1, flixflex2, flixflex3, flixflex4],
+    links: {
+      github: "https://github.com/aymen-Dahmoun/Flix_Flex",
+      website: "",
     },
-    {
-      name: "XVert",
-      description:
-        "A full stack chat app with full features, supports video calls, developed from scratch, powered by light and dark theme",
-      stack: [
-        { name: "React Native", icon: SiReact },
-        { name: "PostgreSQL", icon: SiPostgresql },
-        { name: "Express.js", icon: SiExpress },
-        { name: "Nativewind CSS", icon: SiTailwindcss },
-        { name: "Node.js", icon: FaNodeJs },
-        { name: "Socket.io", icon: SiSocketdotio },
-      ],
-      image: xvertCover,
-      images: [xvert1, xvert2, xvert3, xvert4, xvert5],
-      links: {
-        github: "https://github.com/aymen-Dahmoun/fullStack_chatApp",
-        website: "",
-      },
+  },
+  {
+    name: t("projects.xVert.name"),
+    description: t("projects.xVert.description"),
+    stack: [
+      { name: "React Native", icon: SiReact },
+      { name: "PostgreSQL", icon: SiPostgresql },
+      { name: "Express.js", icon: SiExpress },
+      { name: "Nativewind CSS", icon: SiTailwindcss },
+      { name: "Node.js", icon: FaNodeJs },
+      { name: "Socket.io", icon: SiSocketdotio },
+    ],
+    image: xvertCover,
+    images: [xvert1, xvert2, xvert3, xvert4, xvert5],
+    links: {
+      github: "https://github.com/aymen-Dahmoun/fullStack_chatApp",
+      website: "",
     },
-    {
-      name: "MooD",
-      description:
-        "A modern app that helps you track your mood jumps over the day, and analyse them through diffrent plots, powered by Gemini API as a pyschological assistant",
-      stack: [
-        { name: "React Native", icon: SiReact },
-        { name: "Asyncstorage", icon: FaDatabase },
-        { name: "Gemini API", icon: SiGooglegemini },
-        { name: "Expo Go", icon: SiExpo },
-      ],
-      image: moodCover,
-      images: [mood1, mood2, mood3, mood4],
-      links: {
-        github: "https://github.com/aymen-Dahmoun/Mood_Tracker",
-        website: "",
-      },
+  },
+  {
+    name: t("projects.mooD.name"),
+    description: t("projects.mooD.description"),
+    stack: [
+      { name: "React Native", icon: SiReact },
+      { name: "Asyncstorage", icon: FaDatabase },
+      { name: "Gemini API", icon: SiGooglegemini },
+      { name: "Expo Go", icon: SiExpo },
+    ],
+    image: moodCover,
+    images: [mood1, mood2, mood3, mood4],
+    links: {
+      github: "https://github.com/aymen-Dahmoun/Mood_Tracker",
+      website: "",
     },
-    {
-      name: "Nex",
-      description:
-        "A very fancy website for a cybersecurity club, made by real passion",
-      stack: [
-        { name: "React", icon: SiReact },
-        { name: "Emailjs", icon: SiGmail },
-        { name: "React terminal", icon: Terminal },
-      ],
-      image: nexCover,
-      images: [nex1, nex2, nex3],
-      links: {
-        github: "https://github.com/aymen-Dahmoun/Nex",
-        website: "https://nexclub.vercel.app/",
-      },
+  },
+  {
+    name: t("projects.nex.name"),
+    description: t("projects.nex.description"),
+    stack: [
+      { name: "React", icon: SiReact },
+      { name: "Emailjs", icon: SiGmail },
+      { name: "React terminal", icon: Terminal },
+    ],
+    image: nexCover,
+    images: [nex1, nex2, nex3],
+    links: {
+      github: "https://github.com/aymen-Dahmoun/Nex",
+      website: "https://nexclub.vercel.app/",
     },
-    {
-      name: "Meyouch Shop",
-      description:
-        "An E-commerce website for girly products, smooth, user friendly, powered by a mobile application for a dashbored",
-      stack: [
-        { name: "React Native", icon: SiReact },
-        { name: "React", icon: SiReact },
-        { name: "Vite", icon: SiVite },
-        { name: "SCSS", icon: SiCss3 },
-        { name: "Supabase", icon: SiSupabase },
-        { name: "Telegram Bots API", icon: FaTelegram },
-      ],
-      image: meyCover,
-      images: [mey1, mey2, mey3, mey4],
-      links: {
-        github: "",
-        website: "https://www.meyouchshop.me/",
-      },
+  },
+  {
+    name: t("projects.meyouchShop.name"),
+    description: t("projects.meyouchShop.description"),
+    stack: [
+      { name: "React Native", icon: SiReact },
+      { name: "React", icon: SiReact },
+      { name: "Vite", icon: SiVite },
+      { name: "SCSS", icon: SiCss3 },
+      { name: "Supabase", icon: SiSupabase },
+      { name: "Telegram Bots API", icon: FaTelegram },
+    ],
+    image: meyCover,
+    images: [mey1, mey2, mey3, mey4],
+    links: {
+      github: "",
+      website: "https://www.meyouchshop.me/",
     },
-    {
-      name: "Fatourati",
-      description:
-        "An invoice generator offline app, powered by seamless forms, dark/light mode, and local storage for frequent products with typing suggessions",
-      stack: [
-        { name: "React Native", icon: SiReact },
-        { name: "Expo", icon: SiExpo },
-        { name: "Nativewind CSS", icon: SiTailwindcss },
-        { name: "Asyncstorage", icon: Database },
-      ],
-      image: fatouraCover,
-      images: [fatoura1, fatoura2, fatoura3],
-      links: {
-        github: "https://github.com/aymen-Dahmoun/invoce_generator",
-        website: "",
-      },
+  },
+  {
+    name: t("projects.fatourati.name"),
+    description: t("projects.fatourati.description"),
+    stack: [
+      { name: "React Native", icon: SiReact },
+      { name: "Expo", icon: SiExpo },
+      { name: "Nativewind CSS", icon: SiTailwindcss },
+      { name: "Asyncstorage", icon: Database },
+    ],
+    image: fatouraCover,
+    images: [fatoura1, fatoura2, fatoura3],
+    links: {
+      github: "https://github.com/aymen-Dahmoun/invoce_generator",
+      website: "",
     },
-  ];
+  },
+];
 
 export default function Projects() {
+  const { t } = useTranslation();
   const [open, setOpen] = useState(false);
+  const projects = getProjectsData(t);
   const [selectedProject, setSelectedProject] = useState<
     (typeof projects)[0] | null
   >(null);
 
   return (
     <section className="relative flex flex-col items-center justify-center pt-20">
-      <h2 className="text-4xl font-bold text-white mb-12">Projects</h2>
+      <h2 className="text-4xl font-bold text-white mb-12">{t("projects.title")}</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 relative">
         {projects.map((project, i) => (
@@ -202,11 +192,10 @@ export default function Projects() {
           </div>
         ))}
       </div>
-      <div className="py-10 w-screen overflow-x-hidden flex items-end inset-0 h-40 bg-gradient-to-t from-black to-transparent">
-        <AutoScrollList />
-      </div>
+
+      <AutoScrollList />
 
       <Modal open={open} onOpenChange={setOpen} project={selectedProject} />
     </section>
   );
-}
+} 

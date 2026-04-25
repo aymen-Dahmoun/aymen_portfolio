@@ -7,21 +7,13 @@ import { FaEnvelope, FaGithub, FaLinkedin, FaRegSave } from "react-icons/fa";
 import Particles from "react-tsparticles";
 import type { Engine } from "tsparticles-engine";
 import { loadSlim } from "tsparticles-slim";
+import { useTranslation } from "react-i18next";
 
 interface DrawerProps {
   isOpen: boolean;
   onOpen: () => void;
   onClose: () => void;
 }
-
-const SKILLS = [
-  "Mobile Development",
-  "Web Development",
-  "Desktop Development",
-  "PERN Stack",
-  "Automation",
-  "DevOps",
-];
 
 const SOCIAL_LINKS = [
   {
@@ -68,12 +60,22 @@ const itemVariants: Variants = {
 };
 
 const Drawer: React.FC<DrawerProps> = ({ isOpen, onOpen, onClose }) => {
+  const { t, i18n } = useTranslation();
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadSlim(engine);
   }, []);
 
   const highlightRef = useRef<HTMLSpanElement | null>(null);
   const skillsListRef = useRef<HTMLUListElement | null>(null);
+
+  const SKILLS = [
+    t("drawer.skills.mobile"),
+    t("drawer.skills.web"),
+    t("drawer.skills.desktop"),
+    t("drawer.skills.pern"),
+    t("drawer.skills.automation"),
+    t("drawer.skills.devops"),
+  ];
 
   const hideHighlight = () => {
     if (!highlightRef.current) return;
@@ -111,9 +113,11 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onOpen, onClose }) => {
     return () => window.removeEventListener("resize", onResize);
   }, []);
 
+  const isRTL = i18n.dir() === "rtl";
+
   const dragVariant = {
     open: { x: 0 },
-    closed: { x: "-100%" },
+    closed: { x: isRTL ? "100%" : "-100%" },
   };
 
   return (
@@ -123,16 +127,16 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onOpen, onClose }) => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="fixed left-0 top-0 bottom-0 w-4 z-[55] cursor-grab active:cursor-grabbing"
+          className={`fixed ${isRTL ? "right-0" : "left-0"} top-0 bottom-0 w-4 z-[55] cursor-grab active:cursor-grabbing`}
           drag="x"
-          dragConstraints={{ left: 0, right: 100 }}
+          dragConstraints={isRTL ? { left: -100, right: 0 } : { left: 0, right: 100 }}
           dragElastic={0.1}
           onDragEnd={(_, info) => {
-            if (info.offset.x > 50) onOpen();
+            if (isRTL ? info.offset.x < -50 : info.offset.x > 50) onOpen();
           }}
           whileHover={{ background: "rgba(99, 102, 241, 0.1)" }}
         >
-          <div className="absolute top-1/2 left-1 -translate-y-1/2 w-1.5 h-12 bg-indigo-500/30 rounded-full blur-[1px]" />
+          <div className={`absolute top-1/2 ${isRTL ? "right-1" : "left-1"} -translate-y-1/2 w-1.5 h-12 bg-indigo-500/30 rounded-full blur-[1px]`} />
         </motion.div>
       )}
 
@@ -147,24 +151,24 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onOpen, onClose }) => {
               onClick={onClose}
             />
 
-            <div className="absolute top-10 right-10 -translate-x-1/2 text-gray-400 text-sm animate-bounce pointer-events-none z-[80]">
-              ← Drag or Scroll ↓
+            <div className={`absolute top-10 ${isRTL ? "left-10 translate-x-1/2" : "right-10 -translate-x-1/2"} text-gray-400 text-sm animate-bounce pointer-events-none z-[80]`}>
+              {t("drawer.dragOrScroll")}
             </div>
 
             <motion.div
               drag="x"
-              dragConstraints={{ left: -1000, right: 0 }}
+              dragConstraints={isRTL ? { left: 0, right: 1000 } : { left: -1000, right: 0 }}
               dragElastic={0.05}
               onDragEnd={(_, info) => {
-                if (info.offset.x < -100) onClose();
+                if (isRTL ? info.offset.x > 100 : info.offset.x < -100) onClose();
               }}
               variants={dragVariant}
               initial="closed"
               animate="open"
               exit="closed"
               transition={{ type: "spring", damping: 30, stiffness: 300 }}
-              className="fixed top-0 left-0 z-[70] h-full w-full bg-slate-950 flex flex-col items-center justify-center overflow-y-scroll overflow-x-hidden pt-120 md:pt-0 touch-pan-y"
-              style={{ x: isOpen ? 0 : "-100%", scrollbarWidth: "none" }}
+              className={`fixed top-0 ${isRTL ? "right-0" : "left-0"} z-[70] h-full w-full bg-slate-950 flex flex-col items-center justify-center overflow-y-scroll overflow-x-hidden pt-120 md:pt-0 touch-pan-y`}
+              style={{ x: isOpen ? 0 : (isRTL ? "100%" : "-100%"), scrollbarWidth: "none" }}
             >
               <Particles
                 id="drawer-particles"
@@ -190,8 +194,8 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onOpen, onClose }) => {
                 }}
               />
 
-              <div className="absolute top-1/4 -left-20 w-80 h-80 bg-blue-600/20 rounded-full blur-[120px]" />
-              <div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-indigo-600/20 rounded-full blur-[120px]" />
+              <div className="absolute top-1/4 -start-20 w-80 h-80 bg-blue-600/20 rounded-full blur-[120px]" />
+              <div className="absolute bottom-1/4 -end-20 w-80 h-80 bg-indigo-600/20 rounded-full blur-[120px]" />
 
               <div className="relative z-10 w-full max-w-7xl px-8 md:px-16 flex flex-col md:flex-row items-center gap-12 md:gap-24">
                 <CometCard className="w-64 md:w-96 cursor-pointer">
@@ -216,7 +220,7 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onOpen, onClose }) => {
                   variants={containerVariants}
                   initial="hidden"
                   animate="visible"
-                  className="flex-1 text-center md:text-left text-white"
+                  className={`flex-1 text-center ${isRTL ? "md:text-right" : "md:text-left"} text-white`}
                 >
                   <motion.div variants={itemVariants}>
                     <h1 className="text-5xl md:text-7xl font-black">
@@ -230,13 +234,12 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onOpen, onClose }) => {
                     variants={itemVariants}
                     className="mt-6 text-lg text-slate-400 max-w-xl"
                   >
-                    I bridge the gap between imagination and reality by crafting
-                    premium digital experiences.
+                    {t("drawer.imaginationReality")}
                   </motion.p>
 
                   <motion.div variants={itemVariants} className="mt-10">
                     <h2 className="text-sm font-bold uppercase text-slate-500 mb-4">
-                      Core Expertise
+                      {t("drawer.coreExpertise")}
                     </h2>
 
                     <ul
@@ -246,7 +249,7 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onOpen, onClose }) => {
                     >
                       <span
                         ref={highlightRef}
-                        className="absolute rounded-lg bg-white/5 border border-blue-400/30 pointer-events-none transition-all duration-300 opacity-0"
+                        className="absolute top-0 start-0 rounded-lg bg-white/5 border border-blue-400/30 pointer-events-none transition-all duration-300 opacity-0"
                         style={{
                           width: "0px",
                           height: "0px",
@@ -273,7 +276,7 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onOpen, onClose }) => {
                     variants={itemVariants}
                     className="mt-10 flex items-center gap-8"
                   >
-                    <div className="flex pb-12 space-x-6">
+                    <div className="flex pb-12 gap-6">
                       {SOCIAL_LINKS.map((link, i) => (
                         <a
                           key={i}
