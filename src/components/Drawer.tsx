@@ -122,12 +122,11 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onOpen, onClose }) => {
 
   return (
     <>
-      {/* Edge Trigger Area - only active when closed */}
       {!isOpen && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className={`fixed ${isRTL ? "right-0" : "left-0"} top-0 bottom-0 w-96 z-[55] cursor-grab active:cursor-grabbing`}
+          className={`fixed ${isRTL ? "right-0" : "left-0"} top-0 bottom-0 w-16 z-[55] cursor-grab active:cursor-grabbing`}
           drag="x"
           dragConstraints={isRTL ? { left: -100, right: 0 } : { left: 0, right: 100 }}
           dragElastic={0.1}
