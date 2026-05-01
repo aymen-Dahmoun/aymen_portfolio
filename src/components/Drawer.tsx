@@ -208,8 +208,8 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onOpen, onClose }) => {
                     </div>
 
                     <div className="w-full py-6 flex flex-col items-center bg-slate-900/80 border-t border-white/10 rounded-b-2xl">
-                      <h3 className="text-2xl font-bold tracking-widest text-white">
-                        AYMEN
+                      <h3 className="text-xl font-bold tracking-widest text-white">
+                        {t("drawer.pfpTitle")}
                       </h3>
                     </div>
                   </div>
