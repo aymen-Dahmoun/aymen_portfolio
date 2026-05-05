@@ -3,6 +3,7 @@ import Drawer from "./components/Drawer";
 import Navbar from "./components/Navbar";
 import Home from "./screens/Home";
 import Footer from "./components/Footer";
+import OrbitalCursor from "./components/OrbitalCursor";
 
 export default function App() {
   const [isOpen, setIsOpen] = useState(true);
@@ -19,6 +20,7 @@ export default function App() {
 
   return (
     <div className="flax" >
+      <OrbitalCursor />
       <Navbar onMenuClick={() => setIsOpen(true)} />
       <Drawer
         isOpen={isOpen}
