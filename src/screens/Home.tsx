@@ -4,6 +4,7 @@ import Roadmap from "../components/Milestones";
 import Projects from "../components/Projects";
 import TechIUse from "../components/TechIUse";
 import Services from "../components/Services";
+import Contact from "../components/Contact";
 
 export default function Home() {
   const device = useDevice();
@@ -29,7 +30,13 @@ export default function Home() {
       <section id="roadmap" className="">
         <Roadmap />
       </section>
-      <Services />
+      <section id="services" className="">
+        <Services />
+      </section>
+      <section id="contact" className="">
+        <Contact />
+      </section>
+
     </div>
   );
 }

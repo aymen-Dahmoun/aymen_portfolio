@@ -1,9 +1,8 @@
 import { useDevice } from "../hooks/useDevice";
-import MilestoneBackground from "./FloatingParticlesBg";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
-const getMilestones = (t: any) => [
+const getMilestones = (t: (key: string) => string) => [
   {
     year: "2022",
     title: t("milestones.m2022.title"),
@@ -49,7 +48,7 @@ export default function Milestones() {
   const milestones = getMilestones(t);
 
   return (
-    <div className="relative min-h-screen w-screen bg-gradient-to-bl from-transparent via-transparent to-blue-900/10 py-20 bg-transparent overflow-hidden">
+    <div className="relative min-h-screen w-screen py-20 bg-transparent overflow-hidden">
 
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
@@ -66,7 +65,6 @@ export default function Milestones() {
           const isLeft = isRTL ? !isEven : isEven;
           return (
             <div key={index} className="relative mb-32 md:mb-48">
-              {/* Connecting "Maze" Path */}
               {!isMobile && index < milestones.length - 1 && (
                 <div
                   className={`absolute top-10 h-48 w-[80%] border-indigo-500/20 z-0
@@ -85,12 +83,10 @@ export default function Milestones() {
                   viewport={{ once: true }}
                   className={`relative z-10 max-w-2xl ${isLeft ? "text-start ps-12" : "text-end pe-12"} ${isMobile ? "text-center px-4" : ""}`}
                 >
-                  {/* Glowing Node / Orb placed at the milestone */}
                   <div className={`absolute top-2 w-5 h-5 rounded-full bg-indigo-500 shadow-[0_0_20px_rgba(99,102,241,1)] z-20
                     ${isLeft ? "start-2" : "end-2"} ${isMobile ? "hidden" : "block"}`}
                   />
 
-                  {/* Decorative Year Background */}
                   <span className={`absolute -top-16 ${isLeft ? "-start-12" : "-end-12"} text-8xl md:text-[10rem] font-black text-white/[0.03] select-none pointer-events-none tracking-tighter`}>
                     {milestone.year}
                   </span>

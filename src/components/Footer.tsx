@@ -122,10 +122,10 @@ export default function Footer() {
 
               <div className="flex items-center gap-3 mb-4">
                 <div className="relative">
-                  <div className="w-2.5 h-2.5 rounded-full bg-green-500" />
-                  <div className="absolute inset-0 w-2.5 h-2.5 rounded-full bg-green-500 animate-ping" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-indigo-500" />
+                  <div className="absolute inset-0 w-2.5 h-2.5 rounded-full bg-indigo-500 animate-ping" />
                 </div>
-                <span className="text-xs font-black text-green-400 uppercase tracking-widest">
+                <span className="text-xs font-black text-indigo-400 uppercase tracking-widest">
                   {t("footer.openForHire")}
                 </span>
               </div>

@@ -137,21 +137,88 @@
         "subtitle": "A comprehensive ecosystem of services driving robust, end-to-end applications.",
         "core": "CORE",
         "systemCore": "SYSTEM CORE",
-        "frontendTitle": "Frontend",
+        "frontendTitle": "Frontend Development",
         "frontendDesc": "Modern interfaces, responsive UI, component-driven development.",
-        "mobileTitle": "Mobile Apps",
+        "frontendDetails": [
+            "Building responsive and modern web applications using React",
+            "Creating reusable UI components and scalable frontend architectures",
+            "Converting UI/UX designs into pixel-perfect interfaces",
+            "Improving performance and user experience"
+        ],
+        "mobileTitle": "Mobile App Development",
         "mobileDesc": "Native-like flows, real-time sync, mobile-first UX.",
-        "backendTitle": "Backend",
+        "mobileDetails": [
+            "Developing Android applications using Kotlin",
+            "Building cross-platform mobile apps (React Native if needed)",
+            "Designing clean UI flows and smooth user experiences",
+            "Integrating apps with backend APIs"
+        ],
+        "backendTitle": "Backend Development",
         "backendDesc": "Scalable APIs, secure auth, robust server logic.",
-        "fullstackTitle": "Full-Stack",
+        "backendDetails": [
+            "Building RESTful APIs using Node.js & Express",
+            "Designing scalable backend architectures",
+            "Implementing authentication systems (JWT, sessions)",
+            "Handling business logic, security, and validation"
+        ],
+        "fullstackTitle": "Full-Stack Development",
         "fullstackDesc": "End-to-end integration, seamless data flow.",
-        "dbTitle": "Databases",
+        "fullstackDetails": [
+            "End-to-end web application development",
+            "Connecting frontend, backend, and database systems",
+            "Building complete SaaS-style applications",
+            "Managing full product architecture"
+        ],
+        "dbTitle": "Database Design & Integration",
         "dbDesc": "Relational schema design, optimized query strategies.",
-        "apiTitle": "API Design",
+        "dbDetails": [
+            "Designing relational database schemas (PostgreSQL, MySQL)",
+            "Optimizing queries and data structure",
+            "Integrating databases with backend systems",
+            "Managing data relationships and scaling logic"
+        ],
+        "apiTitle": "API Integration & System Design",
         "apiDesc": "Idempotent endpoints, system decoupling, 3rd party webhooks.",
-        "saasTitle": "SaaS Products",
+        "apiDetails": [
+            "Integrating third-party APIs (payment, auth, external services)",
+            "Designing clean and maintainable API structures",
+            "Building modular and reusable backend systems"
+        ],
+        "saasTitle": "SaaS & Product Development",
         "saasDesc": "MVP building, multi-tenant architecture, product vision.",
-        "optTitle": "Optimization",
-        "optDesc": "Performance scaling, reducing tech debt, refactoring."
+        "saasDetails": [
+            "Turning ideas into MVPs (Minimum Viable Products)",
+            "Designing scalable SaaS architectures",
+            "Building systems focused on real-world problems and automation",
+            "Helping define technical direction for products"
+        ],
+        "optTitle": "Performance & Optimization",
+        "optDesc": "Performance scaling, reducing tech debt, refactoring.",
+        "optDetails": [
+            "Improving frontend load speed and responsiveness",
+            "Optimizing backend performance and database queries",
+            "SEO optimization for web applications (when needed)"
+        ],
+        "maintTitle": "Maintenance & Improvements",
+        "maintDesc": "Refactoring legacy code into cleaner architecture.",
+        "maintDetails": [
+            "Debugging and fixing existing applications",
+            "Adding new features to existing systems",
+            "Refactoring legacy code into cleaner architecture"
+        ]
+    },
+    "contact": {
+        "title": "Contact Me",
+        "subtitle": "Let's craft something amazing together.",
+        "nameLabel": "Name",
+        "namePlaceholder": "Your name",
+        "emailLabel": "Email",
+        "emailPlaceholder": "your.email@example.com",
+        "messageLabel": "Message",
+        "messagePlaceholder": "Your message...",
+        "sendButton": "Send Message",
+        "sendingButton": "Sending...",
+        "successMessage": "Sent Successfully",
+        "errorMessage": "Error Sending"
     }
 }

@@ -152,6 +152,59 @@
         "saasTitle": "Produits SaaS",
         "saasDesc": "Création de MVP, architecture multi-locataires, vision produit.",
         "optTitle": "Optimisation",
-        "optDesc": "Mise à l'échelle des performances, réduction de la dette technique, refactoring."
+        "optDesc": "Mise à l'échelle des performances, réduction de la dette technique, refactoring.",
+        "frontendDetails": [
+            "Créer des applications web réactives et modernes avec React",
+            "Créer des composants UI réutilisables et des architectures frontend évolutives",
+            "Convertir des conceptions UI/UX en interfaces au pixel près",
+            "Améliorer les performances et l'expérience utilisateur"
+        ],
+        "mobileDetails": [
+            "Développement d'applications Android avec Kotlin",
+            "Création d'applications mobiles multiplateformes (React Native si nécessaire)",
+            "Conception de flux d'interface utilisateur clairs et d'expériences utilisateur fluides",
+            "Intégration d'applications avec des API backend"
+        ],
+        "backendDetails": [
+            "Création d'API RESTful avec Node.js et Express",
+            "Conception d'architectures backend évolutives",
+            "Mise en œuvre de systèmes d'authentification (JWT, sessions)",
+            "Gestion de la logique métier, de la sécurité et de la validation"
+        ],
+        "fullstackDetails": [
+            "Développement d'applications web de bout en bout",
+            "Connexion des systèmes frontend, backend et base de données",
+            "Création d'applications complètes de type SaaS",
+            "Gestion de l'architecture complète du produit"
+        ],
+        "dbDetails": [
+            "Conception de schémas de bases de données relationnelles (PostgreSQL, MySQL)",
+            "Modélisation de données (NoSQL/MongoDB si applicable)",
+            "Écriture et optimisation de requêtes SQL",
+            "Mise en œuvre du stockage et de la récupération sécurisés des données"
+        ],
+        "devopsDetails": [
+            "Délploiement d'applications",
+            "Écriture de scripts d'automatisation"
+        ],
+        "maintDetails": [
+            "Débogage et correction d'applications existantes",
+            "Ajout de nouvelles fonctionnalités aux systèmes existants",
+            "Refactoring de code existant vers une architecture plus propre"
+        ]
+    },
+    "contact": {
+        "title": "Contactez-moi",
+        "subtitle": "Créons quelque chose de fantastique ensemble.",
+        "nameLabel": "Nom",
+        "namePlaceholder": "Votre nom",
+        "emailLabel": "E-mail",
+        "emailPlaceholder": "votre.email@exemple.com",
+        "messageLabel": "Message",
+        "messagePlaceholder": "Votre message...",
+        "sendButton": "Envoyer le message",
+        "sendingButton": "Envoi en cours...",
+        "successMessage": "Envoyé avec succès",
+        "errorMessage": "Erreur d'envoi"
     }
 }
