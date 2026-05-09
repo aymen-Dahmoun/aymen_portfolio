@@ -131,5 +131,27 @@
             "automation": "Automation",
             "devops": "DevOps"
         }
+    },
+    "services": {
+        "title": "System Architecture",
+        "subtitle": "A comprehensive ecosystem of services driving robust, end-to-end applications.",
+        "core": "CORE",
+        "systemCore": "SYSTEM CORE",
+        "frontendTitle": "Frontend",
+        "frontendDesc": "Modern interfaces, responsive UI, component-driven development.",
+        "mobileTitle": "Mobile Apps",
+        "mobileDesc": "Native-like flows, real-time sync, mobile-first UX.",
+        "backendTitle": "Backend",
+        "backendDesc": "Scalable APIs, secure auth, robust server logic.",
+        "fullstackTitle": "Full-Stack",
+        "fullstackDesc": "End-to-end integration, seamless data flow.",
+        "dbTitle": "Databases",
+        "dbDesc": "Relational schema design, optimized query strategies.",
+        "apiTitle": "API Design",
+        "apiDesc": "Idempotent endpoints, system decoupling, 3rd party webhooks.",
+        "saasTitle": "SaaS Products",
+        "saasDesc": "MVP building, multi-tenant architecture, product vision.",
+        "optTitle": "Optimization",
+        "optDesc": "Performance scaling, reducing tech debt, refactoring."
     }
 }

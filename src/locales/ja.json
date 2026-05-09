@@ -131,5 +131,27 @@
             "automation": "自動化",
             "devops": "DevOps"
         }
+    },
+    "services": {
+        "title": "システムアーキテクチャ",
+        "subtitle": "堅牢でエンドツーエンドのアプリケーションを推進する包括的なサービスエコシステム。",
+        "core": "コア",
+        "systemCore": "システムコア",
+        "frontendTitle": "フロントエンド",
+        "frontendDesc": "モダンなインターフェース、レスポンシブUI、コンポーネント駆動開発。",
+        "mobileTitle": "モバイルアプリ",
+        "mobileDesc": "ネイティブのようなフロー、リアルタイム同期、モバイルファーストなUX。",
+        "backendTitle": "バックエンド",
+        "backendDesc": "スケーラブルなAPI、安全な認証、堅牢なサーバーロジック。",
+        "fullstackTitle": "フルスタック",
+        "fullstackDesc": "エンドツーエンドの統合、シームレスなデータフロー。",
+        "dbTitle": "データベース",
+        "dbDesc": "リレーショナルスキーマ設計、最適化されたクエリ戦略。",
+        "apiTitle": "API設計",
+        "apiDesc": "べき等なエンドポイント、システムの分離、サードパーティのWebhook。",
+        "saasTitle": "SaaS製品",
+        "saasDesc": "MVP構築、マルチテナントアーキテクチャ、製品ビジョン。",
+        "optTitle": "最適化",
+        "optDesc": "パフォーマンスのスケーリング、技術的負債の削減、リファクタリング。"
     }
 }

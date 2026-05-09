@@ -131,5 +131,27 @@
             "automation": "Automatisation",
             "devops": "DevOps"
         }
+    },
+    "services": {
+        "title": "Architecture Système",
+        "subtitle": "Un écosystème complet de services pilotant des applications robustes de bout en bout.",
+        "core": "CŒUR",
+        "systemCore": "CŒUR SYSTÈME",
+        "frontendTitle": "Frontend",
+        "frontendDesc": "Interfaces modernes, UI réactive, développement orienté composants.",
+        "mobileTitle": "Applications Mobiles",
+        "mobileDesc": "Flux natifs, synchronisation en temps réel, UX mobile first.",
+        "backendTitle": "Backend",
+        "backendDesc": "API évolutives, authentification sécurisée, logique serveur robuste.",
+        "fullstackTitle": "Full-Stack",
+        "fullstackDesc": "Intégration de bout en bout, flux de données fluide.",
+        "dbTitle": "Bases de données",
+        "dbDesc": "Conception de schémas relationnels, stratégies de requêtes optimisées.",
+        "apiTitle": "Conception d'API",
+        "apiDesc": "Endpoints idempotents, découplage de systèmes, webhooks tiers.",
+        "saasTitle": "Produits SaaS",
+        "saasDesc": "Création de MVP, architecture multi-locataires, vision produit.",
+        "optTitle": "Optimisation",
+        "optDesc": "Mise à l'échelle des performances, réduction de la dette technique, refactoring."
     }
 }
