@@ -205,6 +205,7 @@
         "sendButton": "Envoyer le message",
         "sendingButton": "Envoi en cours...",
         "successMessage": "Envoyé avec succès",
-        "errorMessage": "Erreur d'envoi"
+        "errorMessage": "Erreur d'envoi",
+        "requestService": "Demander ce service"
     }
 }

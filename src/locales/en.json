@@ -219,6 +219,7 @@
         "sendButton": "Send Message",
         "sendingButton": "Sending...",
         "successMessage": "Sent Successfully",
-        "errorMessage": "Error Sending"
+        "errorMessage": "Error Sending", 
+        "requestService": "Request This Service"
     }
 }

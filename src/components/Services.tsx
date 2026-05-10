@@ -109,6 +109,7 @@ const Planet = ({
 
   const floatingY = isHovered ? 0 : Math.sin(index) * 6;
   const isLeftHemisphere = Math.cos(offset) < -0.1;
+  const { t } = useTranslation();
 
   return (
     <motion.div
@@ -163,7 +164,7 @@ const Planet = ({
               href="#contact" 
               className="inline-block px-3 py-2 bg-indigo-600/10 hover:bg-indigo-600/20 text-indigo-400 border border-indigo-600/20 text-xs font-medium rounded-md transition-colors w-full text-center"
             >
-              Contact Me
+              {t("services.requestService")}
             </a>
           </motion.div>
         )}

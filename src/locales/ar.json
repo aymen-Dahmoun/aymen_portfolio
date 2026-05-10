@@ -205,6 +205,7 @@
         "sendButton": "إرسال رسالة",
         "sendingButton": "جاري الإرسال...",
         "successMessage": "تم الإرسال بنجاح",
-        "errorMessage": "خطأ في الإرسال"
+        "errorMessage": "خطأ في الإرسال",
+        "requestService": "أطلب الخدمة"
     }
 }

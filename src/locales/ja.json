@@ -205,6 +205,7 @@
         "sendButton": "メッセージを送信する",
         "sendingButton": "送信中...",
         "successMessage": "送信成功",
-        "errorMessage": "送信エラー"
+        "errorMessage": "送信エラー",
+        "requestService": "依頼する"
     }
 }
