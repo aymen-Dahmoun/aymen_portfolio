@@ -191,6 +191,22 @@
             "Débogage et correction d'applications existantes",
             "Ajout de nouvelles fonctionnalités aux systèmes existants",
             "Refactoring de code existant vers une architecture plus propre"
+        ],
+        "apiDetails": [
+            "Intégration d'API tierces (paiement, authentification, services externes)",
+            "Conception de structures d'API propres et maintenables",
+            "Création de systèmes backend modulaires et réutilisables"
+        ],
+        "saasDetails": [
+            "Transformation d'idées en produits minimum viables (MVP)",
+            "Conception d'architectures SaaS évolutives",
+            "Création de systèmes axés sur des problèmes réels et l'automatisation",
+            "Assistance dans la définition de l'orientation technique des produits"
+        ],
+        "optDetails": [
+            "Amélioration de la vitesse de chargement du frontend et de la réactivité",
+            "Optimisation des performances backend et des requêtes de base de données",
+            "Optimisation SEO pour les applications web (si nécessaire)"
         ]
     },
     "contact": {
