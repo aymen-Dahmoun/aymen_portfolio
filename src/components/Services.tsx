@@ -164,7 +164,7 @@ const Planet = ({
               href="#contact" 
               className="inline-block px-3 py-2 bg-indigo-600/10 hover:bg-indigo-600/20 text-indigo-400 border border-indigo-600/20 text-xs font-medium rounded-md transition-colors w-full text-center"
             >
-              {t("services.requestService")}
+              {t("contact.requestService")}
             </a>
           </motion.div>
         )}
