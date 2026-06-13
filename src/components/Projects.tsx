@@ -20,11 +20,11 @@ import type { IconType } from "react-icons";
 import AutoScrollList from "./AutoScrollList";
 import { FaDatabase, FaNodeJs, FaTelegram } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
-import flixflexCover from "../assets/flixflexCover.jpg";
-import flixflex1 from "../assets/flixflex1.jpg";
-import flixflex2 from "../assets/flixflex2.jpg";
-import flixflex3 from "../assets/flixflex3.jpg";
-import flixflex4 from "../assets/flixflex4.jpg";
+import ecolab1 from "../assets/ecolab1.png";
+import ecolab2 from "../assets/ecolab2.png"
+import ecolab3 from "../assets/ecolab3.png"
+import ecolab4 from "../assets/ecolab4.png"
+import ecolabCover from "../assets/ecolabCover.png"
 import xvertCover from "../assets/xvertCover.jpg";
 import xvert1 from "../assets/xvert1.jpg";
 import xvert2 from "../assets/xvert2.jpg";
@@ -62,20 +62,19 @@ export interface Link {
 
 const getProjectsData = (t: any) => [
   {
-    name: t("projects.flixFlex.name"),
-    description: t("projects.flixFlex.description"),
+    name: t("projects.ecolab.name"),
+    description: t("projects.ecolab.description"),
     stack: [
-      { name: "React Native", icon: SiReact },
-      { name: "Firebase", icon: SiFirebase },
-      { name: "TMDB API", icon: FaDatabase },
-      { name: "Expo Go", icon: SiExpo },
-      { name: "React Query", icon: SiReactquery },
+      { name: "React", icon: SiReact },
+      { name: "Electron", icon: SiReact },
+      { name: "SQL", icon: SiSupabase },
+      { name: "Tailwind CSS", icon: SiTailwindcss },
     ],
-    image: flixflexCover,
-    images: [flixflex1, flixflex2, flixflex3, flixflex4],
+    image: ecolabCover,
+    images: [ecolab1, ecolab2, ecolab3, ecolab4],
     links: {
-      github: "https://github.com/aymen-Dahmoun/Flix_Flex",
-      website: "",
+      github: "",
+      website: "https://ecolabdz.studio/",
     },
   },
   {
@@ -142,7 +141,7 @@ const getProjectsData = (t: any) => [
     images: [mey1, mey2, mey3, mey4],
     links: {
       github: "",
-      website: "https://www.meyouchshop.me/",
+      website: "https://meyouch-website.vercel.app/",
     },
   },
   {
